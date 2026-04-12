@@ -11,10 +11,7 @@ export default function Home() {
       <Header />
 
       <main>
-<section
-  className="relative overflow-hidden"
-  style={{ backgroundImage: "url('/hero-bgs2.png')" }}
->
+<section className="hero-bg relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[420px] sm:min-h-[500px]">
   <div className="absolute inset-0 bg-white/10" />
 
   <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
@@ -27,12 +24,12 @@ export default function Home() {
               <p className="mb-4 inline-block rounded-full bg-white px-4 py-1 text-sm font-medium text-[#3f4b74] shadow-sm">
                 번역 · 공증 · 아포스티유 · 대사관인증
               </p>
-              <h1 className="text-4xl font-bold leading-tight text-[#2f3a63] sm:text-5xl">
-                정확하고 신속한
+<h1 className="text-3xl font-bold leading-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
+                  정확하고 신속한
                 <br />
                 번역/인증 서비스를 제공합니다
               </h1>
-              <p className="mt-6 text-lg leading-8 text-slate-600">
+              <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
                 개인 문서부터 기업 문서까지, 제출 목적에 맞는 번역과 확인서 발급,
                 아포스티유 및 대사관 인증까지 한 번에 안내해드립니다.
               </p>
@@ -43,43 +40,40 @@ export default function Home() {
                 <p>-  법원 통·번역인</p>
                 <p>-  조선소·제조업·금융기관 근무</p>
               </div>
-            <div className="mt-6 flex items-center justify-between">
-
-  {/* 왼쪽 버튼 그룹 */}
-  <div className="flex items-center gap-4">
+           <div className="mt-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
     <a
-  href="https://open.kakao.com/me/love_autumnsky"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full bg-[#2f3a63] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
->
-  상담 문의하기
-</a>
+      href="https://open.kakao.com/me/love_autumnsky"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full bg-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+    >
+      상담 문의하기
+    </a>
 
     <a
-  href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="rounded-full border border-[#2f3a63] px-6 py-3 text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
->
-  사례 보기
-</a>
+      href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full border border-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
+    >
+      사례 보기
+    </a>
   </div>
 
-  {/* 오른쪽 카카오 */}
   <a
     href="https://open.kakao.com/me/love_autumnsky"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-flex items-center rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
+    className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
   >
     <img
       src="/kakao.png"
+      alt="카카오톡"
       className="mr-2 h-4 w-4 object-contain"
     />
     카카오톡 문의하기
   </a>
-
 </div>
             </div>
           </div>
@@ -115,9 +109,7 @@ export default function Home() {
                 key={item.title}
                 className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
-                <div className="mb-4 inline-flex rounded-full bg-[#e9edf8] px-4 py-1 text-sm font-semibold text-[#3f4b74]">
-                  Service
-                </div>
+               
                 <h3 className="text-xl font-bold text-[#2f3a63]">{item.title}</h3>
                 <p className="mt-4 text-sm leading-7 text-slate-600">{item.desc}</p>
               </div>
@@ -132,22 +124,26 @@ export default function Home() {
               <p className="mt-3 text-sm text-slate-200">
                 제출 국가, 문서 종류, 희망 일정만 알려주시면 진행 가능 여부를 빠르게 안내해드립니다.
               </p>
-              <div className="mt-6 flex flex-nowrap items-center gap-6 text-sm overflow-x-auto">
-  <div className="rounded-full bg-white/10 px-6 py-3 whitespace-nowrap">
+             <div className="mt-6 flex flex-col items-stretch gap-3 text-sm md:flex-row md:flex-wrap md:items-center">
+  <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
     전화: 010-6261-9885
   </div>
 
-  <div className="rounded-full bg-white/10 px-6 py-3 whitespace-nowrap">
-    이메일: love_autumnsky@naver.com
+  <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
+    이메일: skytruthlee@naver.com
   </div>
 
   <a
     href="https://open.kakao.com/me/love_autumnsky"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center gap-3 rounded-full bg-[#FEE500] px-6 py-3 font-semibold text-black shadow-md transition hover:brightness-95 whitespace-nowrap"
+    className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 font-semibold text-black shadow-md transition hover:brightness-95"
   >
-    <img src="/kakao.png" alt="카카오톡" className="h-5 w-5 object-contain" />
+    <img
+      src="/kakao.png"
+      alt="카카오톡"
+      className="mr-2 h-4 w-4 object-contain"
+    />
     카카오톡 상담하기
   </a>
 
@@ -155,9 +151,8 @@ export default function Home() {
     href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
     target="_blank"
     rel="noopener noreferrer"
-    className="flex items-center gap-3 rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition hover:brightness-90 whitespace-nowrap"
+    className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition hover:brightness-90"
   >
-    <img src="/naver.png" alt="네이버 블로그" className="h-5 w-5 object-contain" />
     블로그 방문 (사례보기)
   </a>
 </div>

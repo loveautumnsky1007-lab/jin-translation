@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
 const menuItems = [
   {
     title: "영문 번역/사실확인서",
@@ -38,14 +42,16 @@ const menuItems = [
 ];
 
 export default function Header() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="/" className="text-2xl font-bold tracking-tight text-[#2f3a63]">
-          국제자문 번역행정사사무소
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
+        <a href="/" className="text-xl font-bold tracking-tight text-[#2f3a63] sm:text-2xl">
+          국제자문번역행정사사무소
         </a>
 
-        <nav className="hidden items-center gap-10 lg:flex">
+        <nav className="hidden items-center gap-8 lg:flex">
           {menuItems.map((menu) => (
             <div key={menu.title} className="group relative">
               <button className="py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]">
@@ -81,7 +87,52 @@ export default function Header() {
         >
           문의하기
         </a>
+
+        <button
+          type="button"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          className="inline-flex rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-[#33415f] lg:hidden"
+        >
+          메뉴
+        </button>
       </div>
+
+      {mobileOpen && (
+        <div className="border-t border-slate-200 bg-white lg:hidden">
+          <div className="mx-auto max-w-7xl px-4 py-4">
+            <div className="space-y-4">
+              {menuItems.map((menu) => (
+                <div key={menu.title} className="rounded-2xl border border-slate-200">
+                  <div className="rounded-t-2xl bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white">
+                    {menu.title}
+                  </div>
+                  <ul className="space-y-1 px-3 py-3">
+                    {menu.children.map((child) => (
+                      <li key={child}>
+                        <a
+                          href="#services"
+                          className="block rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-[#f1f4fb]"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {child}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+
+              <a
+                href="#contact"
+                className="inline-flex rounded-full bg-[#3f4b74] px-5 py-2.5 text-sm font-semibold text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                문의하기
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
