@@ -42,7 +42,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <a href="/" className="text-2xl font-bold tracking-tight text-[#2f3a63]">
-          JIN Translation
+          국제자문 번역행정사사무소
         </a>
 
         <nav className="hidden items-center gap-10 lg:flex">
