@@ -38,35 +38,34 @@ export default function Home() {
                 <p>-  법원 통·번역인</p>
                 <p>-  조선소·제조업·금융기관 근무</p>
               </div>
-              <div className="mt-8 flex flex-wrap gap-4">
+            <div className="mt-6 flex items-center justify-between">
 
-                <a
-                  href="https://open.kakao.com/me/love_autumnsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#3f4b74] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
-                >
-                  상담 문의하기
-                </a>
+  {/* 왼쪽 버튼 그룹 */}
+  <div className="flex items-center gap-4">
+    <button className="rounded-full bg-[#2f3a63] px-6 py-3 text-sm font-semibold text-white shadow-md">
+      상담 문의하기
+    </button>
 
-                <a
-                  href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full border border-[#3f4b74] px-6 py-3 text-sm font-semibold text-[#3f4b74] transition hover:bg-[#3f4b74] hover:text-white"
-                >
-                  사례 보기
-                </a>
+    <button className="rounded-full border border-[#2f3a63] px-6 py-3 text-sm font-semibold text-[#2f3a63]">
+      사례 보기
+    </button>
+  </div>
 
-                <a
-                  href="https://open.kakao.com/me/love_autumnsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-auto rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
-                >
-                  카카오톡 문의하기
-                </a>
-              </div>
+  {/* 오른쪽 카카오 */}
+  <a
+    href="https://open.kakao.com/me/love_autumnsky"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
+  >
+    <img
+      src="/kakao.png"
+      className="mr-2 h-4 w-4 object-contain"
+    />
+    카카오톡 문의하기
+  </a>
+
+</div>
             </div>
           </div>
         </section>
@@ -119,34 +118,40 @@ export default function Home() {
               <p className="mt-3 text-sm text-slate-200">
                 제출 국가, 문서 종류, 희망 일정만 알려주시면 진행 가능 여부를 빠르게 안내해드립니다.
               </p>
-              <div className="mt-6 flex flex-wrap gap-4 text-sm">
-                <div className="rounded-full bg-white/10 px-4 py-2">전화: 010-8240-0000</div>
-                <div className="rounded-full bg-white/10 px-4 py-2">이메일: love_autumnsky@naver.com</div>
-                {/* 카카오톡 상담하기 */}
-                <a
-                  href="https://open.kakao.com/me/love_autumnsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#FEE500] px-5 py-2 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
-                >
-                  카카오톡 상담하기
-                </a>
+              <div className="mt-6 flex flex-nowrap items-center gap-6 text-sm overflow-x-auto">
+  <div className="rounded-full bg-white/10 px-6 py-3 whitespace-nowrap">
+    전화: 010-6261-9885
+  </div>
 
-                {/* 블로그 방문 */}
-                <a
-                  href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="rounded-full bg-[#03C75A] px-5 py-2 text-sm font-semibold text-black shadow-md transition hover:brightness-90"
-                >
-                  블로그 방문 (사례보기)
-                </a>
-              </div>
+  <div className="rounded-full bg-white/10 px-6 py-3 whitespace-nowrap">
+    이메일: skytruthlee@naver.com
+  </div>
+
+  <a
+    href="https://open.kakao.com/me/love_autumnsky"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 rounded-full bg-[#FEE500] px-6 py-3 font-semibold text-black shadow-md transition hover:brightness-95 whitespace-nowrap"
+  >
+    <img src="/kakao.png" alt="카카오톡" className="h-5 w-5 object-contain" />
+    카카오톡 상담하기
+  </a>
+
+  <a
+    href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-3 rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition hover:brightness-90 whitespace-nowrap"
+  >
+    <img src="/naver.png" alt="네이버 블로그" className="h-5 w-5 object-contain" />
+    블로그 방문 (사례보기)
+  </a>
+</div>
             </div>
           </div>
         </section>
       </main>
-      <footer className="bg-[#f4f4f4] text-[#333] mt-20 border-t">
+      <footer className="bg-[#f4f4f4] text-[#333] mt-0 border-t">
         <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8 text-center text-sm text-gray-600 leading-6">
           <p className="font-semibold text-gray-800">
             국제자문번역행정사사무소
