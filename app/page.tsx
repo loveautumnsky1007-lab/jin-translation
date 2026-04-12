@@ -47,13 +47,23 @@ export default function Home() {
 
   {/* 왼쪽 버튼 그룹 */}
   <div className="flex items-center gap-4">
-    <button className="rounded-full bg-[#2f3a63] px-6 py-3 text-sm font-semibold text-white shadow-md">
-      상담 문의하기
-    </button>
+    <a
+  href="https://open.kakao.com/me/love_autumnsky"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full bg-[#2f3a63] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+>
+  상담 문의하기
+</a>
 
-    <button className="rounded-full border border-[#2f3a63] px-6 py-3 text-sm font-semibold text-[#2f3a63]">
-      사례 보기
-    </button>
+    <a
+  href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="rounded-full border border-[#2f3a63] px-6 py-3 text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
+>
+  사례 보기
+</a>
   </div>
 
   {/* 오른쪽 카카오 */}
