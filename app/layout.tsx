@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "국제자문번역행정사사무소",
     images: [
       {
-        url: "https://jin-translation-v10.vercel.app/hero-bg.png",
+        url: "https://jin-translation-v10.vercel.app/hero-bgs-thumbnail.png",
         width: 1200,
         height: 630,
       },
