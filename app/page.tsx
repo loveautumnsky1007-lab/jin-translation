@@ -11,9 +11,14 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="bg-gradient-to-b from-[#eef1fb] to-white">
-          <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
-            <div className="max-w-5xl">
+<section
+  className="relative overflow-hidden"
+  style={{ backgroundImage: "url('/hero-bgs2.png')" }}
+>
+  <div className="absolute inset-0 bg-white/10" />
+
+  <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
+    <div className="max-w-9xl">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-sm text-[#2f3a63] font-semibold">
                   행정안전부 공인 · 대한외국어번역행정사협회
@@ -74,7 +79,6 @@ export default function Home() {
           <div className="mb-10">
             <h2 className="text-3xl font-bold text-[#2f3a63]">주요 서비스</h2>
             <p className="mt-3 text-slate-600">
-              상단 메뉴에 마우스를 올리면 각 서비스 하위 항목을 바로 확인할 수 있도록 구성했습니다.
             </p>
           </div>
 
@@ -124,7 +128,7 @@ export default function Home() {
   </div>
 
   <div className="rounded-full bg-white/10 px-6 py-3 whitespace-nowrap">
-    이메일: skytruthlee@naver.com
+    이메일: love_autumnsky@naver.com
   </div>
 
   <a
