@@ -11,23 +11,25 @@ export default function Home() {
       <Header />
 
       <main>
-<section className="hero-bg relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[420px] sm:min-h-[500px]">
-  <div className="absolute inset-0 bg-white/10" />
+        <section className="hero-bg relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[420px] sm:min-h-[500px]">
+          <div className="absolute inset-0 bg-white/10" />
 
-  <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
-    <div className="max-w-9xl">
+          <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
+            <div className="max-w-9xl">
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-sm text-[#2f3a63] font-semibold">
                   행정안전부 공인 · 대한외국어번역행정사협회
                 </span>
               </div>
-              <p className="mb-4 inline-block rounded-full bg-white px-4 py-1 text-sm font-medium text-[#3f4b74] shadow-sm">
-                번역 · 공증 · 아포스티유 · 대사관인증
+              <p className="mb-4 inline-block rounded-full bg-[#ccd4eb] px-6 py-1 text-sm font-medium text-[#3f4b74] shadow-sm">
+                당일번역 · 급행번역 · 익일수령
               </p>
-<h1 className="text-3xl font-bold leading-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
-                  정확하고 신속한
+              <h1 className="text-3xl font-bold leading-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
+
+                정확하고 신속한
                 <br />
                 번역/인증 서비스를 제공합니다
+
               </h1>
               <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
                 개인 문서부터 기업 문서까지, 제출 목적에 맞는 번역과 확인서 발급,
@@ -40,122 +42,145 @@ export default function Home() {
                 <p>-  법원 통·번역인</p>
                 <p>-  조선소·제조업·금융기관 근무</p>
               </div>
-           <div className="mt-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-    <a
-      href="https://open.kakao.com/me/love_autumnsky"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full bg-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:opacity-90"
-    >
-      상담 문의하기
-    </a>
+              <div className="mt-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                  <a
+                    href="https://open.kakao.com/me/love_autumnsky"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full bg-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+                  >
+                    상담 문의하기
+                  </a>
 
-    <a
-      href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full border border-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
-    >
-      사례 보기
-    </a>
-  </div>
+                  <a
+                    href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-full border border-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
+                  >
+                    사례 보기
+                  </a>
+                </div>
 
-  <a
-    href="https://open.kakao.com/me/love_autumnsky"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
-  >
-    <img
-      src="/kakao.png"
-      alt="카카오톡"
-      className="mr-2 h-4 w-4 object-contain"
-    />
-    카카오톡 문의하기
-  </a>
-</div>
+                <a
+                  href="https://open.kakao.com/me/love_autumnsky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
+                >
+                  <img
+                    src="/kakao.png"
+                    alt="카카오톡"
+                    className="mr-2 h-4 w-4 object-contain"
+                  />
+                  카카오톡 문의하기
+                </a>
+              </div>
             </div>
           </div>
         </section>
 
-        <section id="services" className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <section id="services" className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
           <div className="mb-10">
             <h2 className="text-3xl font-bold text-[#2f3a63]">주요 서비스</h2>
-            <p className="mt-3 text-slate-600">
-            </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {[
               {
-                title: "영문 번역/사실확인서 발급",
+                title: "영문 번역 / 사실확인서 발급",
                 desc: "가족관계증명서, 기본증명서, 혼인증명서, 생활기록부 등 개인 제출 문서를 안내합니다.",
+                link: "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
+
               },
               {
                 title: "국문 번역확인 증명서 발급",
                 desc: "해외 서류의 국내 제출용 번역확인 증명서 발급 항목을 안내합니다.",
+                link: "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
+
               },
               {
-                title: "기업번역",
-                desc: "재무제표, 감사보고서, 법률계약서, 법인 서류 등 기업 문서 번역 서비스를 제공합니다.",
+                title: "기업번역 서비스",
+                desc: "재무제표, 감사보고서, 법률계약서, 법인 서류 등 기업 문서 번역 서비스를 제공 합니다.",
+                link: "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",
+
               },
               {
-                title: "법원통번역 / 아포스티유 / 대사관인증",
+                title: (
+                  <>
+                    법원통번역 / 아포스티유 <br />
+                    / 대사관인증
+                  </>
+                ),
                 desc: "판결문, 소장, 인증 대행, 번역공증 대행 및 비즈니스 통역을 지원합니다.",
+                link: "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27",
+
               },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+            ].map((item, idx) => (
+              <a
+                key={idx}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-[24px] border border-slate-200 bg-white p-6 text-center shadow-sm transition hover:-translate-y-1 hover:shadow-lg cursor-pointer"
               >
-               
-                <h3 className="text-xl font-bold text-[#2f3a63]">{item.title}</h3>
-                <p className="mt-4 text-sm leading-7 text-slate-600">{item.desc}</p>
-              </div>
+                <h3 className="text-xl font-bold text-[#2f3a63] leading-snug">
+                  {item.title}
+                </h3>
+
+                <p className="mt-4 text-left text-sm leading-7 text-slate-600">
+                  {item.desc}
+                </p>
+              </a>
             ))}
           </div>
         </section>
 
         <section id="contact" className="bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+          <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
             <div className="rounded-[28px] bg-[#3f4b74] px-8 py-10 text-white shadow-lg">
               <h2 className="text-2xl font-bold">빠른 상담 안내</h2>
               <p className="mt-3 text-sm text-slate-200">
                 제출 국가, 문서 종류, 희망 일정만 알려주시면 진행 가능 여부를 빠르게 안내해드립니다.
               </p>
-             <div className="mt-6 flex flex-col items-stretch gap-3 text-sm md:flex-row md:flex-wrap md:items-center">
-  <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
-    전화: 010-6261-9885
-  </div>
+              <div className="mt-6 flex flex-col items-stretch gap-3 text-sm md:flex-row md:flex-wrap md:items-center">
+                <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
+                  전화: 010-6261-9885
+                </div>
 
-  <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
-    이메일: skytruthlee@naver.com
-  </div>
+                <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
+                  이메일: skytruthlee@naver.com
+                </div>
 
-  <a
-    href="https://open.kakao.com/me/love_autumnsky"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 font-semibold text-black shadow-md transition hover:brightness-95"
-  >
-    <img
-      src="/kakao.png"
-      alt="카카오톡"
-      className="mr-2 h-4 w-4 object-contain"
-    />
-    카카오톡 상담하기
-  </a>
+                <a
+                  href="https://open.kakao.com/me/love_autumnsky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 font-semibold text-black shadow-md transition hover:brightness-95"
+                >
+                  <img
+                    src="/kakao.png"
+                    alt="카카오톡"
+                    className="mr-2 h-4 w-4 object-contain"
+                  />
+                  카카오톡 상담하기
+                </a>
 
-  <a
-    href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition hover:brightness-90"
-  >
-    블로그 방문 (사례보기)
-  </a>
-</div>
+                <a
+                  href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition hover:brightness-90"
+                >
+                  <img
+                    src="/naver.png"
+                    alt="블로그 방문"
+                    className="mr-2 h-4 w-4 object-contain"
+                  />
+                  블로그 방문 (사례보기)
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -181,25 +206,25 @@ export default function Home() {
           <p>
             사업자번호 : 404-40-00718
           </p>
-<div className="mt-3 flex items-center justify-center gap-2 text-xs">
-  <button
-    type="button"
-    onClick={() => setOpenModal("terms")}
-    className="rounded px-2 py-1 text-gray-500 transition hover:bg-gray-200 hover:text-[#2f3a63] cursor-pointer"
-  >
-    이용약관
-  </button>
+          <div className="mt-3 flex items-center justify-center gap-2 text-xs">
+            <button
+              type="button"
+              onClick={() => setOpenModal("terms")}
+              className="rounded px-2 py-1 text-gray-500 transition hover:bg-gray-200 hover:text-[#2f3a63] cursor-pointer"
+            >
+              이용약관
+            </button>
 
-  <span className="text-gray-300">|</span>
+            <span className="text-gray-300">|</span>
 
-  <button
-    type="button"
-    onClick={() => setOpenModal("privacy")}
-    className="rounded px-2 py-1 text-gray-500 transition hover:bg-gray-200 hover:text-[#2f3a63] cursor-pointer"
-  >
-    개인정보처리방침
-  </button>
-</div>
+            <button
+              type="button"
+              onClick={() => setOpenModal("privacy")}
+              className="rounded px-2 py-1 text-gray-500 transition hover:bg-gray-200 hover:text-[#2f3a63] cursor-pointer"
+            >
+              개인정보처리방침
+            </button>
+          </div>
 
           <p className="text-xs text-gray-400 mt-2">
             © {new Date().getFullYear()} 국제자문번역행정사사무소. All Rights Reserved.
