@@ -137,75 +137,75 @@ export default function Home() {
           </div>
         </section>
 
-<section className="bg-white py-12">
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
-    
-    <h2 className="text-2xl font-bold text-[#2f3a63] mb-6">
-      오시는 길
-    </h2>
+        <section className="bg-white py-12">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
-    <div className="grid gap-8 lg:grid-cols-2">
-      
-      {/* 지도 */}
-      <a
-        href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block overflow-hidden rounded-2xl border shadow hover:shadow-lg transition"
-      >
-        <img
-          src="/map.png"
-          alt="사무소 위치"
-          className="w-full h-[220px] sm:h-[300px] lg:h-[400px] object-cover"
-        />
-      </a>
+            <h2 className="text-2xl font-bold text-[#2f3a63] mb-6">
+              오시는 길
+            </h2>
 
-      {/* 주소 정보 */}
-      <div className="flex flex-col justify-center space-y-2">
-        <h3 className="text-lg font-semibold text-[#2f3a63]">
-          국제자문번역행정사사무소
-        </h3>
+            <div className="grid gap-8 lg:grid-cols-2">
 
-        <p className="text-sm text-slate-600">
-         경기도 성남시 분당구 황새울로 351번길 10, 401-B12 (서현동, 여암빌딩) <br /> <br />
-            
-        
-        </p>
-          {/* PC용 (점 있음) */}
-  <p className="hidden lg:block text-sm text-slate-600 leading-7">
-    · 판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을 신규 오픈했습니다.<br />
-    · 서현점 주차는 풍림아이원에서 2시간 무료 등록 가능합니다. <br />
-    · 방문 전에는 미리 연락주세요.
-  </p>
+              {/* 지도 */}
+              <a
+                href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block overflow-hidden rounded-2xl border shadow hover:shadow-lg transition"
+              >
+                <img
+                  src="/map.png"
+                  alt="사무소 위치"
+                  className="w-full h-[220px] sm:h-[300px] lg:h-[400px] object-cover"
+                />
+              </a>
 
-  {/* 모바일용 (점 제거 + 간격 넓게) */}
-  <p className="block lg:hidden text-sm text-slate-600 leading-7">
-    판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을 신규 오픈했습니다.<br /><br />
-    서현점 주차는 풍림아이원에서 2시간 무료 등록 가능합니다. <br /><br />
-    방문 전에는 미리 연락주세요.
-  </p>
-  
-      
+              {/* 주소 정보 */}
+              <div className="flex flex-col justify-center space-y-2">
+                <h3 className="text-lg font-semibold text-[#2f3a63]">
+                  국제자문번역행정사사무소
+                </h3>
 
-     
-            <a
-          href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
-          target="_blank"
-          rel="noopener noreferrer"
-className="mt-4 mx-auto flex w-fit items-center justify-center rounded-full bg-[#03C75A] px-7 py-3 text-sm text-white hover:opacity-90 lg:mx-0"        >                  
+                <p className="text-sm text-slate-600">
+                  경기도 성남시 분당구 황새울로 351번길 10, 401-B12 (서현동, 여암빌딩) <br /> <br />
+
+
+                </p>
+                {/* PC용 (점 있음) */}
+                <p className="hidden lg:block text-sm text-slate-600 leading-7">
+                  · 판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을 신규 오픈했습니다.<br />
+                  · 서현점 주차는 풍림아이원에서 2시간 무료 등록 가능합니다. <br />
+                  · 방문 전에는 미리 연락주세요.
+                </p>
+
+                {/* 모바일용 (점 제거 + 간격 넓게) */}
+                <p className="block lg:hidden text-sm text-slate-600 leading-7">
+                  판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을 신규 오픈했습니다.<br /><br />
+                  서현점 주차는 풍림아이원에서 2시간 무료 등록 가능합니다. <br /><br />
+                  방문 전에는 미리 연락주세요.
+                </p>
+
+
+
+
+                <a
+                  href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 mx-auto flex w-fit items-center justify-center rounded-full bg-[#03C75A] px-7 py-3 text-sm font-semibold  text-white hover:opacity-90 lg:mx-0"        >
 
                   <img
                     src="/naver_map.png"
                     alt="지도"
                     className="mr-2 h-4 w-4 object-contain"
                   />
-          네이버 지도에서 보기
+                  네이버 지도에서 보기
                 </a>
-      </div>
+              </div>
 
-    </div>
-  </div>
-</section>
+            </div>
+          </div>
+        </section>
         <section id="contact" className="bg-white">
           <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
             <div className="rounded-[28px] bg-[#3f4b74] px-8 py-10 text-white shadow-lg">
@@ -240,7 +240,8 @@ className="mt-4 mx-auto flex w-fit items-center justify-center rounded-full bg-[
                   href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition hover:brightness-90"
+                  className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition"
+                  
                 >
                   <img
                     src="/naver.png"
