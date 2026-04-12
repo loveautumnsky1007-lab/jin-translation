@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#f7f8fc] text-slate-800">
       <Header />
-<meta name="naver-site-verification" content="7bdfe45e179293bc55bff3547608945197ed7945" />
 
       <main>
         <section className="hero-bg relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[420px] sm:min-h-[500px]">
