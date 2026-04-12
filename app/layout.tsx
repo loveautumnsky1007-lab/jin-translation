@@ -13,17 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "국제자문번역행정사사무소",
-  description: "정확하고 신속한 번역·공증·아포스티유 서비스",
+ title: "국제자문번역행정사사무소 | 분당 판교 번역·공증·아포스티유·대사관 인증",
+  description:
+    "분당 판교 영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역, 아포스티유, 대사관 인증 서비스를 제공합니다.",
 
   openGraph: {
     title: "국제자문번역행정사사무소",
     description: "정확하고 신속한 번역/인증 서비스를 제공합니다",
-    url: "https://jin-translation-v10.vercel.app",
+    url: "https://skytruthlee.vercel.app",
     siteName: "국제자문번역행정사사무소",
     images: [
       {
-        url: "https://jin-translation-v10.vercel.app/hero-bgs-thumbnail.png",
+        url: "https://skytruthlee.vercel.app/hero-bgs-thumbnail.png",
         width: 1200,
         height: 630,
       },
