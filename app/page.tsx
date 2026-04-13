@@ -55,8 +55,7 @@ export default function Home() {
 
                   <Link
                     href="/apply"
-                    className="inline-flex w-full items-center justify-center rounded-full bg-[#2f3a63] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 lg:w-[190px] lg:text-sm"
-                  >
+className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:scale-[1.03] hover:shadow-lg active:scale-[0.98] lg:w-[190px] lg:text-sm"                  >
                     견적 문의하기
                   </Link>
 
