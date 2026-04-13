@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const menuItems = [
@@ -99,11 +100,22 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-        <a href="/" className="text-xl font-bold tracking-tight text-[#2f3a63] sm:text-2xl">
+        <Link href="/" className="text-xl font-bold tracking-tight text-[#2f3a63] sm:text-2xl">
           국제자문번역행정사사무소
-        </a>
+        </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 lg:flex">
+          {/* 내부 페이지 메뉴 */}
+          <Link
+            href="/"
+            className="block py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
+          >
+            Home
+          </Link>
+
+         
+
+          {/* 기존 드롭다운 메뉴 */}
           {menuItems.map((menu) => (
             <div key={menu.title} className="group relative">
               <a
@@ -138,15 +150,31 @@ export default function Header() {
               </div>
             </div>
           ))}
+
+           <Link
+            href="/about-us"
+            className="block py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
+          >
+            About Us
+          </Link>
+
+          <Link
+            href="/apply"
+          className="hidden rounded-full bg-[#3f4b74] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 lg:inline-flex"
+          >
+            견적문의
+          </Link>
+
         </nav>
 
+{/*
         <a
           href="#contact"
           className="hidden rounded-full bg-[#3f4b74] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 lg:inline-flex"
         >
           문의하기
         </a>
-
+*/}
         <button
           type="button"
           onClick={() => setMobileOpen((prev) => !prev)}
@@ -160,6 +188,37 @@ export default function Header() {
         <div className="border-t border-slate-200 bg-white lg:hidden">
           <div className="mx-auto max-w-7xl px-4 py-4">
             <div className="space-y-4">
+              {/* 모바일 내부 메뉴 */}
+              <div className="rounded-2xl border border-slate-200 overflow-hidden">
+                <Link
+                  href="/"
+                  className="block bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Home
+                </Link>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 overflow-hidden">
+                <Link
+                  href="/about-us"
+                  className="block bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  About Us
+                </Link>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 overflow-hidden">
+                <Link
+                  href="/apply"
+                  className="block bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  신청폼
+                </Link>
+              </div>
+
               {menuItems.map((menu) => (
                 <div key={menu.title} className="rounded-2xl border border-slate-200">
                   <a

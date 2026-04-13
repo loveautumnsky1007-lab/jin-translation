@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Header from "../components/Header";
+import Link from "next/link"; 
 
 export default function Home() {
   const [openModal, setOpenModal] = useState<"terms" | "privacy" | null>(null);
@@ -42,41 +43,54 @@ export default function Home() {
                 <p>-  법원 통·번역인</p>
                 <p>-  조선소·제조업·금융기관 근무</p>
               </div>
-              <div className="mt-10 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-                  <a
-                    href="https://open.kakao.com/me/love_autumnsky"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-white shadow-md transition hover:opacity-90"
-                  >
-                    상담 문의하기
-                  </a>
+             <div className="mt-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+   
+    <a
+      href="https://open.kakao.com/me/love_autumnsky"
+      target="_blank"
+      rel="noopener noreferrer"
+          className="w-full inline-flex items-center justify-center rounded-full bg-[#2f3a63] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 lg:w-[190px] lg:py-3 lg:text-sm"
+    >
+      상담 문의하기
+    </a>
 
-                  <a
-                    href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full border border-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
-                  >
-                    사례 보기
-                  </a>
-                </div>
+    <a
+      href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="rounded-full border border-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
+    >
+      사례 보기
+    </a>
+  </div>
+<div className="flex flex-col gap-3 lg:items-end">
 
-                <a
-                  href="https://open.kakao.com/me/love_autumnsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:brightness-95"
-                >
-                  <img
-                    src="/kakao.png"
-                    alt="카카오톡"
-                    className="mr-2 h-4 w-4 object-contain"
-                  />
-                  카카오톡 문의하기
-                </a>
-              </div>
+  <Link
+    href="/apply"
+          className="w-full inline-flex items-center justify-center rounded-full bg-[#2f3a63] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 lg:w-[190px] lg:py-3 lg:text-sm"
+
+  >
+    견적 문의하기
+  </Link>
+
+  <a
+    href="https://open.kakao.com/me/love_autumnsky"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-base font-semibold text-black shadow-md transition hover:brightness-95 lg:w-[190px] lg:py-3 lg:text-sm"
+  >
+    <img
+      src="/kakao.png"
+      alt="카카오톡"
+      className="mr-2 h-4 w-4 object-contain"
+    />
+    카카오톡 문의하기
+  </a>
+
+</div>
+
+</div>
             </div>
           </div>
         </section>

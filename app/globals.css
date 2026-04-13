@@ -34,3 +34,12 @@ body {
     background-image: url('/hero-bgs.png');
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
