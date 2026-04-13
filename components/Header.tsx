@@ -25,19 +25,19 @@ const pathname = usePathname();
       mobileHint: "사실 확인서 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
-          name: "가족/기본/혼인 증명서",
+          name: "가족 / 기본 / 혼인 증명서",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EA%B0%80%EC%A1%B1"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EA%B0%80%EC%A1%B1&orderBy=date&range=all",
         },
         {
-          name: "생활기록부/성적증명서",
+          name: "생활기록부 / 성적증명서",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EC%83%9D%ED%99%9C"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EC%83%9D%ED%99%9C&orderBy=date&range=all",
         },
         {
-          name: "납세증명/금융거래내역 자료",
+          name: "납세증명 / 금융거래내역 자료",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EA%B8%88%EC%9C%B5"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EA%B8%88%EC%9C%B5&orderBy=date&range=all",
@@ -58,7 +58,7 @@ const pathname = usePathname();
       mobileHint: "국문 확인증명서 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
-          name: "해외아포스티유 서류",
+          name: "해외 아포스티유 서류",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EC%95%84%ED%8F%AC%EC%8A%A4%ED%8B%B0%EC%9C%A0"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EC%95%84%ED%8F%AC%EC%8A%A4%ED%8B%B0%EC%9C%A0&orderBy=date&range=all",
@@ -70,13 +70,13 @@ const pathname = usePathname();
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%ED%95%99%EC%9C%84&orderBy=date&range=all",
         },
         {
-          name: "해외 출생증명서/사망증명서",
+          name: "해외 출생증명서 / 사망증명서",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EC%B6%9C%EC%83%9D"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EC%B6%9C%EC%83%9D&orderBy=date&range=all",
         },
         {
-          name: "해외세무 자료/해외법률 자료",
+          name: "해외세무 자료 / 해외법률 자료",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EB%B2%95%EB%A5%A0"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EB%B2%95%EB%A5%A0&orderBy=date&range=all",
@@ -91,7 +91,7 @@ const pathname = usePathname();
       mobileHint: "기업 문서 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
-          name: "재무제표/감사보고서/주주총회영업보고서",
+          name: "재무제표 / 감사보고서",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EC%9E%AC%EB%AC%B4%EC%A0%9C%ED%91%9C"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EC%9E%AC%EB%AC%B4%EC%A0%9C%ED%91%9C&orderBy=date&range=all",
@@ -109,7 +109,7 @@ const pathname = usePathname();
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EB%93%B1%EA%B8%B0%EB%B6%80%EB%93%B1%EB%B3%B8&orderBy=date&range=all",
         },
         {
-          name: "정관/이사회의사록/사업계획",
+          name: "정관 / 이사회의사록 / 사업계획",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EC%A0%95%EA%B4%80"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EC%A0%95%EA%B4%80&orderBy=date&range=all",
@@ -124,13 +124,13 @@ const pathname = usePathname();
       mobileHint: "법원 문서, 공증, 인증 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
-          name: "판결문/소장/법원문서 번역",
+          name: "판결문 / 소장 / 법원문서 번역",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EB%B2%95%EC%9B%90"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EB%B2%95%EC%9B%90&orderBy=date&range=all",
         },
         {
-          name: "아포스티유/영사확인/대사관인증 대행",
+          name: "아포스티유 / 영사확인 / 대사관인증 대행",
           link: isMobile
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EC%95%84%ED%8F%AC%EC%8A%A4%ED%8B%B0%EC%9C%A0"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EC%95%84%ED%8F%AC%EC%8A%A4%ED%8B%B0%EC%9C%A0&orderBy=date&range=all",
