@@ -94,14 +94,14 @@ export default function AboutUsPage() {
             <h2 className="text-2xl font-bold text-[#2f3a63]">명함</h2>
 
             <div className="mt-8 hidden justify-center lg:flex">
-              <div className="w-full p-2 lg:max-w-4xl">
-                <img
-                  src="/business_card_lee_kim.png"
-                  alt="명함"
-                  className="w-full object-contain"
-                />
-              </div>
-            </div>
+  <div className="w-full max-w-5xl">
+    <img
+      src="/business_card_lee_kim.png"
+      alt="명함"
+      className="w-full object-contain rounded-xl shadow-md"
+    />
+  </div>
+</div>
 
             <div className="mt-8 flex flex-col gap-4 lg:hidden">
               <img

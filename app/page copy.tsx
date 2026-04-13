@@ -33,13 +33,14 @@ export default function Home() {
 </p>
               <h1 className="text-3xl font-bold leading-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
 
-               정확성과 신속성을 갖춘 <br />
-                전문 번역 · 인증 서비스
+                정확하고 신속한
+                <br />
+                번역/인증 서비스를 제공합니다
 
               </h1>
               <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
                 개인 문서부터 기업 문서까지, 제출 목적에 맞는 번역과 확인서 발급,
-                아포스티유 및 대사관 인증까지 한 번에 제공합니다.
+                아포스티유 및 대사관 인증까지 한 번에 안내해드립니다.
               </p>
               <div className="mt-6 space-y-2 text-base text-slate-600">
                 <p>-  외국어(영어) 번역 행정사</p>
@@ -87,7 +88,7 @@ export default function Home() {
                       alt="카카오톡"
                       className="mr-2 h-4 w-4 object-contain"
                     />
-                    카카오톡 상담
+                    카카오톡 문의하기
                   </a>
 
                 </div>
@@ -105,23 +106,23 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {[
               {
-                title: "공문서 번역 및 확인서 발급",
-                desc: "가족관계증명서, 혼인증명서, 생활기록부 등 개인 제출용 각종 증명서 번역 및 확인서 발급 서비스를 제공합니다.",
+                title: "영문 번역 / 사실확인서 발급",
+                desc: "가족관계증명서, 기본증명서, 혼인증명서, 생활기록부 등 개인 제출 문서를 안내합니다.",
                 link: isMobile
                   ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
                   : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
               },
               {
-                title: "국문 번역확인 증명서",
-                desc: "해외 서류의 국내 제출을 위한 번역확인 증명서를 발급합니다.",
+                title: "국문 번역확인 증명서 발급",
+                desc: "해외 서류의 국내 제출용 번역확인 증명서 발급 항목을 안내합니다.",
                 link: isMobile
                   ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
                   : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
 
               },
               {
-                title: "기업 문서 번역",
-                desc: "재무제표, 감사보고서, 법률계약서, 법인 서류, 계약서 등 기업 및 법인 문서 번역을 전문적으로 수행합니다.",
+                title: "기업번역 서비스",
+                desc: "재무제표, 감사보고서, 법률계약서, 법인 서류 등 기업 문서 번역 서비스를 제공 합니다.",
                 link: isMobile
                   ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10"
                   : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",

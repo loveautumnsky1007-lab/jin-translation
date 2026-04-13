@@ -1,14 +1,12 @@
 "use client";
-
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Home } from "lucide-react";
-import { usePathname } from "next/navigation";
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-const pathname = usePathname();
+
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768);
     check();
@@ -18,15 +16,15 @@ const pathname = usePathname();
 
   const menuItems = [
     {
-      title: "영문 번역 / 사실확인서",
+      title: "영문 번역/사실확인서",
       link: isMobile
         ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
         : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
-      mobileHint: "사실 확인서 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
           name: "가족/기본/혼인 증명서",
           link: isMobile
+
             ? "https://m.blog.naver.com/PostSearchList.naver?blogId=skytruthlee&orderType=date&pageAccess=option&periodType=all&searchText=%EA%B0%80%EC%A1%B1"
             : "https://blog.naver.com/PostSearchList.naver?blogId=skytruthlee&categoryNo=0&SearchText=%EA%B0%80%EC%A1%B1&orderBy=date&range=all",
         },
@@ -55,7 +53,6 @@ const pathname = usePathname();
       link: isMobile
         ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
         : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
-      mobileHint: "국문 확인증명서 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
           name: "해외아포스티유 서류",
@@ -88,7 +85,6 @@ const pathname = usePathname();
       link: isMobile
         ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10"
         : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",
-      mobileHint: "기업 문서 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
           name: "재무제표/감사보고서/주주총회영업보고서",
@@ -117,11 +113,10 @@ const pathname = usePathname();
       ],
     },
     {
-      title: "법원통번역 / 아포스티유",
+      title: "법원통번역/아포스티유",
       link: isMobile
         ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27"
         : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27",
-      mobileHint: "법원 문서, 공증, 인증 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
           name: "판결문/소장/법원문서 번역",
@@ -154,51 +149,42 @@ const pathname = usePathname();
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-2">
-          <Image
-            src="/kj-logo.png"
-            alt="KJ 로고"
-            width={32}
-            height={32}
-            className="rounded"
-          />
-          <span className="text-xl font-bold tracking-tight text-[#2f3a63] sm:text-2xl">
-            국제자문번역행정사사무소
-          </span>
-        </Link>
+      <Link
+  href="/"
+  className="flex items-center gap-2"
+>
+  <Image
+    src="/kj-logo.png"
+    alt="KJ 로고"
+    width={32}
+    height={32}
+    className="rounded"
+  />
+  <span className="text-xl font-bold tracking-tight text-[#2f3a63] sm:text-2xl">
+    국제자문번역행정사사무소
+  </span>
+</Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
-          <Link
-            href="/"
-            className="flex items-center gap-1 py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
-          >
-            <Home className="h-4 w-4" />
-            Home
-          </Link>
+        <Link
+  href="/"
+  className="flex items-center gap-1 py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
+>
+  <Home className="h-4 w-4" />
+  HOME
+</Link>
 
           {menuItems.map((menu) => (
             <div key={menu.title} className="group relative">
-    
-    {/* 타이틀 (클릭 제거) */}
-    <div
-      className="flex cursor-default items-center py-3 text-[15px] font-semibold text-[#33415f] transition group-hover:text-[#3f4b74]"
-    >
-      {menu.title}
-    </div>
+              <a
+                href={menu.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
+              >
+                {menu.title}
+              </a>
 
-    {/* 툴팁 */}
-    <div className="pointer-events-none absolute left-1/2 top-full z-50 mt-2 -translate-x-1/2 opacity-0 transition-all duration-200 group-hover:opacity-100">
-      <div className="whitespace-nowrap rounded-md bg-[#2f3a63] px-3 py-1.5 text-xs text-white shadow-lg">
-        실제 사례 블로그로 이동합니다
-      </div>
-    </div>
-
- {/* 툴팁 */}
-  <div className="pointer-events-none absolute left-1/2 top-0 z-50 -translate-x-1/2 -translate-y-full opacity-0 transition group-hover:opacity-100">
-    <div className="mb-2 rounded-md bg-[#2f3a63] px-3 py-1.5 text-xs text-white shadow-lg">
-        &nbsp;&nbsp;&nbsp;
-    </div>
-  </div>
               <div className="invisible absolute left-1/2 top-full z-50 w-[320px] -translate-x-1/2 translate-y-3 opacity-0 transition-all duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
                 <div className="overflow-hidden rounded-[22px] border border-slate-200 bg-white shadow-xl">
                   <div className="bg-[#3f4b74] px-5 py-4 text-base font-bold text-white">
@@ -207,15 +193,14 @@ const pathname = usePathname();
                   <ul className="space-y-1 px-4 py-4">
                     {menu.children.map((child) => (
                       <li key={child.name}>
-                    <a
-  href={child.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-between rounded-xl px-3 py-3 text-sm leading-6 text-slate-700 transition hover:bg-[#f1f4fb] hover:text-[#2f3a63]"
->
-  <span>{child.name}</span>
-  <span className="text-[11px] text-slate-400">↗</span>
-</a>
+                        <a
+                          href={child.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block rounded-xl px-3 py-3 text-sm leading-6 text-slate-700 transition hover:bg-[#f1f4fb] hover:text-[#2f3a63]"
+                        >
+                          {child.name}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -223,121 +208,105 @@ const pathname = usePathname();
               </div>
             </div>
           ))}
-<Link
-  href="/about-us"
-  className={`block py-3 text-[15px] font-semibold transition ${
-    pathname === "/about-us"
-      ? "text-[#3f4b74] border-b-2 border-[#3f4b74]"
-      : "text-[#33415f] hover:text-[#3f4b74]"
-  }`}
->
-  About Us
-</Link>
-<Link
-  href="/apply"
-  className={`relative hidden rounded-full px-5 py-2.5 text-sm font-semibold text-white transition lg:inline-flex ${
-    pathname === "/apply"
-      ? "bg-[#2f3a63]"
-      : "bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
-  }`}
->
-  견적문의
 
-  {pathname === "/apply" && (
-    <span className="absolute -bottom-1 left-1/2 h-[2px] w-6 -translate-x-1/2 bg-white"></span>
-  )}
-</Link>
+          <Link
+            href="/about-us"
+            className="block py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
+          >
+            About Us
+          </Link>
+
+          <Link
+            href="/apply"
+            className="hidden rounded-full bg-[#3f4b74] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90 lg:inline-flex"
+          >
+            견적문의
+          </Link>
         </nav>
 
-       <button
-  type="button"
-  onClick={() => setMobileOpen((prev) => !prev)}
-  className={`inline-flex items-center justify-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition lg:hidden ${
-    mobileOpen
-      ? "bg-[#3f4b74] text-white"
-      : "border border-slate-300 text-[#33415f]"
-  }`}
->
-  {mobileOpen ? "✕ 닫기" : "☰ 메뉴"}
-</button>
+        <button
+          type="button"
+          onClick={() => setMobileOpen((prev) => !prev)}
+          className="inline-flex rounded-lg border border-slate-300 px-3 py-2 text-sm font-semibold text-[#33415f] lg:hidden"
+        >
+          메뉴
+        </button>
       </div>
 
       {mobileOpen && (
         <div className="border-t border-slate-200 bg-white lg:hidden">
           <div className="mx-auto max-w-7xl px-4 py-4">
             <div className="space-y-4">
-  
-
-           <div className="overflow-hidden rounded-2xl border border-slate-200">
-  <Link
-    href="/about-us"
-className="block bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-4 py-3 text-center text-sm font-bold text-white shadow-md transition active:scale-[0.98]"    onClick={() => setMobileOpen(false)}
-  >
-    About Us
-  </Link>
-</div>
+              <div className="overflow-hidden rounded-2xl border border-slate-200">
+                <Link
+                  href="/"
+                  className="block bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  Home
+                </Link>
+              </div>
 
               <div className="overflow-hidden rounded-2xl border border-slate-200">
-  <Link
-    href="/apply"
-className="block bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-4 py-3 text-center text-sm font-bold text-white shadow-md transition active:scale-[0.98]"    onClick={() => setMobileOpen(false)}
-  >
-    견적 문의하기
-  </Link>
-</div>
+                <Link
+                  href="/about-us"
+                  className="block bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  About Us
+                </Link>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl border border-slate-200">
+                <Link
+                  href="/apply"
+                  className="block bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
+                  onClick={() => setMobileOpen(false)}
+                >
+                  견적 문의하기
+                </Link>
+              </div>
 
               {menuItems.map((menu) => (
                 <div key={menu.title} className="rounded-2xl border border-slate-200">
-                 <a
-  href={menu.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="block rounded-t-2xl bg-[#3f4b74] px-4 py-3 text-white text-center"
-  onClick={() => setMobileOpen(false)}
->
-  <div className="flex items-center justify-center gap-1">
-    <span className="text-center text-sm font-bold">{menu.title}</span>
-    <span className="text-xs font-semibold text-slate-200">↗</span>
-  </div>
-  <p className="mt-1 text-center text-[11px] leading-5 text-slate-200">
-    {menu.mobileHint}
-  </p>
-</a>
-
+                  <a
+                    href={menu.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-t-2xl bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {menu.title}
+                  </a>
                   <ul className="space-y-1 px-3 py-3">
                     {menu.children.map((child) => (
                       <li key={child.name}>
-                   <a
-  href={child.link}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center gap-1 rounded-xl px-3 py-2 text-center text-sm text-slate-700 hover:bg-[#f1f4fb]"
-  onClick={() => setMobileOpen(false)}
->
-  <span className="text-center">{child.name}</span>
-  <span className="text-xs text-slate-400">↗</span>
-</a>
+                        <a
+                          href={child.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block rounded-xl px-3 py-2 text-sm text-slate-700 hover:bg-[#f1f4fb]"
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {child.name}
+                        </a>
                       </li>
                     ))}
                   </ul>
                 </div>
               ))}
 
-             <a
-  href="https://open.kakao.com/me/love_autumnsky"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-5 py-3 text-sm font-semibold text-black shadow-md active:scale-[0.98]"
-  onClick={() => setMobileOpen(false)}
->
-  <img src="/kakao.png" className="h-4 w-4" />
-  카카오톡 문의하기
-</a>
+              <a
+                href="#contact"
+                className="inline-flex rounded-full bg-[#3f4b74] px-5 py-2.5 text-sm font-semibold text-white"
+                onClick={() => setMobileOpen(false)}
+              >
+                문의하기
+              </a>
             </div>
           </div>
         </div>
       )}
     </header>
-    
   );
 }
