@@ -65,14 +65,14 @@ export default function Home() {
     </a>
   </div>
 <div className="flex flex-col gap-3 lg:items-end">
-
+{/*
   <Link
     href="/apply"
           className="w-full inline-flex items-center justify-center rounded-full bg-[#2f3a63] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 lg:w-[190px] lg:py-3 lg:text-sm"
 
   >
     견적 문의하기
-  </Link>
+  </Link> */}
 
   <a
     href="https://open.kakao.com/me/love_autumnsky"
