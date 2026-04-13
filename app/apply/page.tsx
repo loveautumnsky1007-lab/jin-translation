@@ -28,6 +28,7 @@ type FormErrors = {
   phone?: string;
   email?: string;
   service?: string;
+  name?: string;
 };
 
 export default function ApplyPage() {
@@ -88,6 +89,9 @@ export default function ApplyPage() {
     const email =
       (form.elements.namedItem("email") as HTMLInputElement | null)?.value.trim() ??
       "";
+    const name =
+      (form.elements.namedItem("name") as HTMLInputElement | null)?.value.trim() ??
+      "";
     const selectedServices = form.querySelectorAll('input[name="service"]:checked');
 
     if (!privacyAgree) {
@@ -105,7 +109,9 @@ export default function ApplyPage() {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       newErrors.email = "올바른 이메일 형식을 입력해주세요.";
     }
-
+    if (!name) {
+      newErrors.name = "이름 또는 회사명을 입력해주세요.";
+    }
     if (selectedServices.length === 0) {
       newErrors.service = "서비스를 1개 이상 선택해주세요.";
     }
@@ -114,7 +120,7 @@ export default function ApplyPage() {
   };
 
   const focusFirstError = (form: HTMLFormElement, newErrors: FormErrors) => {
-    const order: (keyof FormErrors)[] = ["privacy_agree", "service", "phone", "email"];
+    const order: (keyof FormErrors)[] = ["privacy_agree", "service", "name", "phone", "email"];
 
     for (const key of order) {
       if (!newErrors[key]) continue;
@@ -398,14 +404,23 @@ export default function ApplyPage() {
                       <div className="space-y-4">
                         <div className="w-full">
                           <label className="mb-2 block text-sm font-semibold text-[#2f3a63]">
-                            이름 / 회사명
+                            이름 / 회사명 <span className="text-red-500">*</span>
                           </label>
                           <input
                             type="text"
                             name="name"
-                            className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm outline-none transition focus:border-[#3f4b74]"
+                            className={`w-full rounded-xl border px-4 py-2.5 text-sm outline-none transition ${errors.name
+                              ? "border-red-500 bg-red-50/30"
+                              : "border-slate-300 focus:border-[#3f4b74]"
+                              }`}
                             placeholder="성함 또는 회사명을 입력해주세요"
+                            onChange={() =>
+                              setErrors((prev) => ({ ...prev, name: undefined }))
+                            }
                           />
+                          {errors.name && (
+                            <p className="mt-2 text-xs text-red-500">{errors.name}</p>
+                          )}
                         </div>
 
                         <div className="w-full">
