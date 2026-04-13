@@ -1,11 +1,17 @@
 "use client";
-import { useState } from "react";
 import Header from "../components/Header";
-import Link from "next/link"; 
-
+import Link from "next/link";
+import { useState, useEffect } from "react";
 export default function Home() {
   const [openModal, setOpenModal] = useState<"terms" | "privacy" | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#f7f8fc] text-slate-800">
@@ -43,54 +49,50 @@ export default function Home() {
                 <p>-  법원 통·번역인</p>
                 <p>-  조선소·제조업·금융기관 근무</p>
               </div>
-             <div className="mt-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-  <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-   
-    <a
-      href="https://open.kakao.com/me/love_autumnsky"
-      target="_blank"
-      rel="noopener noreferrer"
-          className="w-full inline-flex items-center justify-center rounded-full bg-[#2f3a63] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 lg:w-[190px] lg:py-3 lg:text-sm"
-    >
-      상담 문의하기
-    </a>
+              <div className="mt-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
 
-    <a
-      href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="rounded-full border border-[#2f3a63] px-6 py-3 text-center text-sm font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white"
-    >
-      사례 보기
-    </a>
-  </div>
-<div className="flex flex-col gap-3 lg:items-end">
-{/*
-  <Link
-    href="/apply"
-          className="w-full inline-flex items-center justify-center rounded-full bg-[#2f3a63] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 lg:w-[190px] lg:py-3 lg:text-sm"
 
-  >
-    견적 문의하기
-  </Link> */}
+                  <Link
+                    href="/apply"
+                    className="inline-flex w-full items-center justify-center rounded-full bg-[#2f3a63] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:opacity-90 lg:w-[190px] lg:text-sm"
+                  >
+                    견적 문의하기
+                  </Link>
 
-  <a
-    href="https://open.kakao.com/me/love_autumnsky"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-full inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-base font-semibold text-black shadow-md transition hover:brightness-95 lg:w-[190px] lg:py-3 lg:text-sm"
-  >
-    <img
-      src="/kakao.png"
-      alt="카카오톡"
-      className="mr-2 h-4 w-4 object-contain"
-    />
-    카카오톡 문의하기
-  </a>
+                  <a
+                    href={
+                      isMobile
+                        ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee"
+                        : "https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-[#2f3a63] px-6 py-3 text-base font-semibold text-[#2f3a63] transition hover:bg-[#2f3a63] hover:text-white lg:w-[190px] lg:text-sm"
+                  >
+                    사례 보기
+                  </a>
+                </div>
+                <div className="flex flex-col gap-3 lg:items-end">
 
-</div>
 
-</div>
+                  <a
+                    href="https://open.kakao.com/me/love_autumnsky"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-base font-semibold text-black shadow-md transition hover:brightness-95 lg:w-[190px] lg:py-3 lg:text-sm"
+                  >
+                    <img
+                      src="/kakao.png"
+                      alt="카카오톡"
+                      className="mr-2 h-4 w-4 object-contain"
+                    />
+                    카카오톡 문의하기
+                  </a>
+
+                </div>
+
+              </div>
             </div>
           </div>
         </section>
@@ -105,19 +107,24 @@ export default function Home() {
               {
                 title: "영문 번역 / 사실확인서 발급",
                 desc: "가족관계증명서, 기본증명서, 혼인증명서, 생활기록부 등 개인 제출 문서를 안내합니다.",
-                link: "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
-
+                link: isMobile
+                  ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
+                  : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
               },
               {
                 title: "국문 번역확인 증명서 발급",
                 desc: "해외 서류의 국내 제출용 번역확인 증명서 발급 항목을 안내합니다.",
-                link: "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
+                link: isMobile
+                  ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
+                  : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
 
               },
               {
                 title: "기업번역 서비스",
                 desc: "재무제표, 감사보고서, 법률계약서, 법인 서류 등 기업 문서 번역 서비스를 제공 합니다.",
-                link: "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",
+                link: isMobile
+                  ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10"
+                  : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",
 
               },
               {
@@ -128,7 +135,9 @@ export default function Home() {
                   </>
                 ),
                 desc: "판결문, 소장, 인증 대행, 번역공증 대행 및 비즈니스 통역을 지원합니다.",
-                link: "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27",
+                link: isMobile
+                  ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27"
+                  : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27",
 
               },
             ].map((item, idx) => (
@@ -251,11 +260,14 @@ export default function Home() {
                 </a>
 
                 <a
-                  href="https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+                  href={
+                    isMobile
+                      ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee"
+                      : "https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition"
-                  
                 >
                   <img
                     src="/naver.png"

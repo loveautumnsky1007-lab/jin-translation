@@ -199,7 +199,7 @@ export default function ApplyPage() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://kjtranslate.com/apply?success=1"
+                  value="https://kjtranslate.com/success"
                 />
 
                 <section>
