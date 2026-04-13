@@ -28,9 +28,9 @@ export default function Home() {
                   행정안전부 공인 · 대한외국어번역행정사협회
                 </span>
               </div>
-              <p className="mb-4 inline-block rounded-full bg-[#ccd4eb] px-6 py-1 text-sm font-medium text-[#3f4b74] shadow-sm">
-                당일번역 · 급행번역 · 익일수령
-              </p>
+               <p className="mb-4 inline-block rounded-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9] px-5 py-1.5 text-sm font-semibold text-white shadow-md backdrop-blur transition hover:shadow-lg">
+  Professional Translation Service
+</p>
               <h1 className="text-3xl font-bold leading-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
 
                 정확하고 신속한
@@ -48,6 +48,7 @@ export default function Home() {
                 <p>-  미국 주립대 석사 (MBA)</p>
                 <p>-  법원 통·번역인</p>
                 <p>-  조선소·제조업·금융기관 근무</p>
+                <p>-  당일번역 · 급행번역 · 익일수령</p>
               </div>
               <div className="mt-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">

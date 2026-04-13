@@ -168,9 +168,9 @@ export default function ApplyPage() {
         <main>
           <section className="bg-[#eef1fb]">
             <div className="mx-auto max-w-4xl px-6 py-14 lg:px-8">
-              <p className="mb-4 inline-block rounded-full bg-white px-4 py-1 text-sm font-medium text-[#3f4b74] shadow-sm">
-                고객센터
-              </p>
+          <p className="mb-4 inline-block rounded-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9] px-5 py-1.5 text-sm font-semibold text-white shadow-md backdrop-blur transition hover:shadow-lg">
+  Professional Translation Service
+</p>
 
               <h1 className="text-3xl font-bold leading-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
                 번역 / 인증 견적문의

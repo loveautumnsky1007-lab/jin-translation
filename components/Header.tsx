@@ -263,7 +263,7 @@ export default function Header() {
                   className="block bg-[#3f4b74] px-4 py-3 text-sm font-bold text-white"
                   onClick={() => setMobileOpen(false)}
                 >
-                  신청폼
+                  견적 문의하기
                 </Link>
               </div>
 

@@ -11,9 +11,9 @@ export default function AboutUsPage() {
       <main>
         <section className="bg-[#eef1fb]">
           <div className="mx-auto max-w-7xl px-6 py-14 lg:px-8">
-            <p className="mb-4 inline-block rounded-full bg-[#ccd4eb] px-6 py-1 text-sm font-medium text-[#3f4b74] shadow-sm">
-              Professional Translation & Certification
-            </p>
+             <p className="mb-4 inline-block rounded-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9] px-5 py-1.5 text-sm font-semibold text-white shadow-md backdrop-blur transition hover:shadow-lg">
+  Professional Translation Service
+</p>
 
             <div className="flex items-center gap-3">
               <Image
