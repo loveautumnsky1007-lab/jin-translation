@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Home } from "lucide-react";
@@ -151,19 +151,28 @@ export default function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
       <Link
   href="/"
-  className="flex items-center gap-2 text-xl font-bold tracking-tight text-[#2f3a63] sm:text-2xl"
+  className="flex items-center gap-2"
 >
-  <Home className="h-6 w-6" />
-  국제자문번역행정사사무소
+  <Image
+    src="/kj-logo.png"
+    alt="KJ 로고"
+    width={32}
+    height={32}
+    className="rounded"
+  />
+  <span className="text-xl font-bold tracking-tight text-[#2f3a63] sm:text-2xl">
+    국제자문번역행정사사무소
+  </span>
 </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
-          <Link
-            href="/"
-            className="block py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
-          >
-            Home
-          </Link>
+        <Link
+  href="/"
+  className="flex items-center gap-1 py-3 text-[15px] font-semibold text-[#33415f] transition hover:text-[#3f4b74]"
+>
+  <Home className="h-4 w-4" />
+  HOME
+</Link>
 
           {menuItems.map((menu) => (
             <div key={menu.title} className="group relative">

@@ -167,7 +167,7 @@ export default function ApplyPage() {
               </p>
 
               <h1 className="text-3xl font-bold leading-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
-                번역 / 인증 실시간 견적문의
+                번역 / 인증 견적문의
               </h1>
 
               <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
@@ -205,7 +205,7 @@ export default function ApplyPage() {
                 <section>
                   <div className="mb-4">
                     <h3 className="text-xl font-bold text-[#2f3a63]">
-                      개인정보 수집 및 이용에대한 동의
+                      개인정보 수집 및 이용에 대한 동의
                     </h3>
                     <p className="mt-1 text-sm text-slate-500">
                       아래 내용을 확인하신 후 동의해 주세요.
@@ -220,28 +220,28 @@ export default function ApplyPage() {
 
 
                       <p className="mt-5 font-semibold text-[#2f3a63]">
-                        1. 수집 항목  
+                        1. 수집 항목
                       </p>
                       <p className="mt-1">
                         성명(회사명), 연락처, 이메일, 주소 등 문의 작성 시 입력한 정보
                       </p>
 
                       <p className="mt-5 font-semibold text-[#2f3a63]">
-                        2. 이용 목적  
+                        2. 이용 목적
                       </p>
                       <p className="mt-1">
                         견적 안내 및 상담 진행, 문의 응대
                       </p>
 
                       <p className="mt-5 font-semibold text-[#2f3a63]">
-                        3. 보유 및 이용 기간  
+                        3. 보유 및 이용 기간
                       </p>
                       <p className="mt-1">
                         문의 처리 완료 후 1년간 보관 후 파기
                       </p>
 
                       <p className="mt-5 font-semibold text-[#2f3a63]">
-                        4. 동의 거부 권리 안내  
+                        4. 동의 거부 권리 안내
                       </p>
                       <p className="mt-1">
                         귀하는 개인정보 수집 및 이용에 대한 동의를 거부할 수 있습니다. 다만, 동의하지 않을 경우 견적 안내 및 상담 서비스 이용이 제한될 수 있습니다.
@@ -266,7 +266,7 @@ export default function ApplyPage() {
                           }))
                         }
                       />
-                      <span>개인정보 수집 및 이용에 대한 동의합니다.</span>
+                      <span>개인정보 수집 및 이용에 동의합니다.</span>
                     </label>
 
                     {errors.privacy_agree && (
@@ -297,12 +297,12 @@ export default function ApplyPage() {
                         <div className="space-y-2">
                           {[
                             "번역",
-                            "번역인증/공증",
-                            "아포스티유/대사관인증",
+                            "번역 인증 / 공증",
+                            "아포스티유 / 대사관인증",
                             "미성년자 부모동의서",
                             "다국어 녹취록",
                             "증명서 발급대행",
-                            "문의 상담",
+                            "기타 상담",
                           ].map((item) => (
                             <label
                               key={item}
@@ -312,7 +312,7 @@ export default function ApplyPage() {
                                 type="checkbox"
                                 name="service"
                                 value={item}
-                                className="h-4 w-4 accent-[#3f4b74]"
+                                className="h-4 w-4 cursor-pointer accent-[#3f4b74]"
                                 onChange={() =>
                                   setErrors((prev) => ({ ...prev, service: undefined }))
                                 }
@@ -339,9 +339,9 @@ export default function ApplyPage() {
 
                     <section className="hidden lg:block lg:col-start-1 lg:row-start-2">
                       <div className="mb-4">
-                        <h3 className="text-xl font-bold text-[#2f3a63]">주소</h3>
+                        <h3 className="text-xl font-bold text-[#2f3a63]">등기 수령 주소 (우편 수령 희망시 입력)</h3>
                         <p className="mt-1 text-sm text-slate-500">
-                          카카오 주소 검색으로 입력할 수 있습니다.
+                          번역본을 우편(등기)으로 받기를 희망하시는 경우 입력해주세요.
                         </p>
                       </div>
 
@@ -358,7 +358,7 @@ export default function ApplyPage() {
                           <button
                             type="button"
                             onClick={openPostcode}
-                            className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#3f4b74] px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
+                            className="inline-flex cursor-pointer shrink-0 items-center justify-center rounded-xl bg-[#3f4b74] px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
                           >
                             주소 검색
                           </button>
@@ -454,7 +454,7 @@ export default function ApplyPage() {
 
                         <div className="w-full">
                           <label className="mb-2 block text-sm font-semibold text-[#2f3a63]">
-                            번역언어
+                            번역 언어
                           </label>
                           <input
                             type="text"
@@ -466,7 +466,7 @@ export default function ApplyPage() {
 
                         <div className="w-full">
                           <label className="mb-2 block text-sm font-semibold text-[#2f3a63]">
-                            제출 국가 또는 기관명
+                            제출 국가 / 기관명
                           </label>
                           <input
                             type="text"
@@ -486,15 +486,25 @@ export default function ApplyPage() {
                             onChange={(e) => setDocumentType(e.target.value)}
                             className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-[#3f4b74]"
                           >
-                            <option value="">문서 종류를 선택해주세요</option>
-                            <option value="가족관계증명서">가족관계증명서</option>
-                            <option value="기본증명서">기본증명서</option>
-                            <option value="혼인관계증명서">혼인관계증명서</option>
-                            <option value="졸업증명서">졸업증명서</option>
-                            <option value="성적증명서">성적증명서</option>
-                            <option value="재직증명서">재직증명서</option>
-                            <option value="사업자등록증">사업자등록증</option>
-                            <option value="판결문">판결문</option>
+                            <option disabled>📄 개인 서류</option>
+                            <option>가족관계증명서</option>
+                            <option>기본증명서</option>
+                            <option>혼인관계증명서</option>
+                            <option>출생증명서</option>
+                            <option>사망증명서</option>
+                            <option>성적증명서</option>
+                            <option>학위증</option>
+                            <option>재직증명서</option>
+
+                            <option disabled>📄 기업 서류</option>
+                            <option>사업자등록증</option>
+                            <option>법인등기부등본</option>
+                            <option>계약서</option>
+
+                            <option disabled>📄  법원 서류</option>
+                            <option>판결문</option>
+
+                            <option disabled>📄  기타</option>
                             <option value="direct">직접 입력</option>
                           </select>
 
@@ -518,15 +528,15 @@ export default function ApplyPage() {
                             type="date"
                             name="due_date"
                             min={new Date().toISOString().split("T")[0]}
-                            className="w-full rounded-xl border border-slate-300 px-4 py-2.5 text-sm outline-none transition focus:border-[#3f4b74]"
+                            className="w-full cursor-pointer rounded-xl border border-slate-300 px-4 py-2.5 text-sm outline-none transition focus:border-[#3f4b74]"
                           />
                         </div>
 
                         <div className="block lg:hidden">
                           <div className="mb-4 mt-8">
-                            <h3 className="text-xl font-bold text-[#2f3a63]">주소</h3>
+                            <h3 className="text-xl font-bold text-[#2f3a63]">등기 수령 주소 (우편 수령 희망시 입력)</h3>
                             <p className="mt-1 text-sm text-slate-500">
-                              카카오 주소 검색으로 입력할 수 있습니다.
+                              번역본을 우편(등기)으로 받기를 희망하시는 경우 입력해주세요.
                             </p>
                           </div>
 
@@ -543,7 +553,7 @@ export default function ApplyPage() {
                               <button
                                 type="button"
                                 onClick={openPostcode}
-                                className="inline-flex shrink-0 items-center justify-center rounded-xl bg-[#3f4b74] px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
+                                className="inline-flex cursor-pointer shrink-0 items-center justify-center rounded-xl bg-[#3f4b74] px-4 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
                               >
                                 주소 검색
                               </button>
@@ -603,7 +613,7 @@ export default function ApplyPage() {
                         <input
                           type="file"
                           name="file1"
-                          className="block w-full text-sm text-slate-600 file:mr-4 file:rounded-full file:border-0 file:bg-[#3f4b74] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:opacity-90"
+                          className="block w-full cursor-pointer text-sm text-slate-600 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-[#3f4b74] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:opacity-90"
                         />
                       </div>
 
@@ -614,7 +624,7 @@ export default function ApplyPage() {
                         <input
                           type="file"
                           name="file2"
-                          className="block w-full text-sm text-slate-600 file:mr-4 file:rounded-full file:border-0 file:bg-[#3f4b74] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:opacity-90"
+                          className="block w-full cursor-pointer text-sm text-slate-600 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-[#3f4b74] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:opacity-90"
                         />
                       </div>
 
@@ -625,7 +635,7 @@ export default function ApplyPage() {
                         <input
                           type="file"
                           name="file3"
-                          className="block w-full text-sm text-slate-600 file:mr-4 file:rounded-full file:border-0 file:bg-[#3f4b74] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:opacity-90"
+                          className="block w-full cursor-pointer text-sm text-slate-600 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:bg-[#3f4b74] file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white hover:file:opacity-90"
                         />
                         <p className="mt-2 text-xs text-slate-500">
                           3개 이상의 파일은 압축파일로 업로드해주세요.
@@ -638,12 +648,12 @@ export default function ApplyPage() {
                 <section className="border-t border-slate-200 pt-8">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                     <p className="text-sm leading-6 text-slate-500">
-                      접수 후 확인하여 메일 또는 연락처로 순차 안내드립니다.
+                      접수된 내용을 확인한 후 이메일 또는 연락처로 순차적으로 안내드립니다.
                     </p>
 
                     <button
                       type="submit"
-                      className="inline-flex items-center justify-center rounded-full bg-[#2f3a63] px-8 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
+                      className="inline-flex cursor-pointer items-center justify-center rounded-full bg-[#2f3a63] px-8 py-3 text-sm font-semibold text-white shadow-md transition hover:opacity-90"
                     >
                       견적 문의하기
                     </button>
