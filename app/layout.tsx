@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "국제자문번역행정사사무소",
     description: "정확하고 신속한 번역/인증 서비스를 제공합니다",
-    url: "https://skytruthlee.vercel.app",
+    url: "https://kjtranslate.com",
     siteName: "국제자문번역행정사사무소",
     images: [
       {
-        url: "https://skytruthlee.vercel.app/hero-bgs-thumbnail.png",
+        url: "https://kjtranslate.com/hero-bgs-thumbnail.png",
         width: 1200,
         height: 630,
       },

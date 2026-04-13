@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://skytruthlee.vercel.app/sitemap.xml",
+    sitemap: "https://kjtranslate.com/sitemap.xml",
   };
 }
