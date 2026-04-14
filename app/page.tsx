@@ -24,24 +24,24 @@ export default function Home() {
           <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
             <div className="max-w-9xl">
               <div className="flex items-center gap-2 mb-4">
-<span className="text-sm text-[#3f4b74] font-medium tracking-wide">
-                    행정안전부 공인 · 대한외국어번역행정사협회
+                <span className="text-sm text-[#3f4b74] font-medium tracking-wide">
+                  행정안전부 공인 · 대한외국어번역행정사협회
                 </span>
               </div>
-               <p className="mb-4 inline-block rounded-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9] px-5 py-1.5 text-xs font-medium tracking-wide text-white shadow-md backdrop-blur transition hover:shadow-lg">
-  Professional Translation Service
-</p>
-<h1 className="text-3xl font-semibold leading-[1.3] tracking-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
-               정확성과 신속성을 갖춘 <br />
+              <p className="mb-4 inline-block rounded-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9] px-5 py-1.5 text-xs font-medium tracking-wide text-white shadow-md backdrop-blur transition hover:shadow-lg">
+                Professional Translation Service
+              </p>
+              <h1 className="text-3xl font-semibold leading-[1.3] tracking-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
+                정확성과 신속성을 갖춘 <br />
                 전문 번역 · 인증 서비스
 
               </h1>
-<p className="mt-6 text-lg leading-8 text-[#33415f] font-medium sm:text-xl">
-                    개인 문서부터 기업 문서까지, 제출 목적에 맞는 번역과 확인서 발급,
+              <p className="mt-6 text-lg leading-8 text-[#33415f] font-medium sm:text-xl">
+                개인 문서부터 기업 문서까지, 제출 목적에 맞는 번역과 확인서 발급,
                 아포스티유 및 대사관 인증까지 한 번에 제공합니다.
               </p>
-<div className="mt-6 space-y-2 text-base text-[#33415f] leading-7 font-medium">
-                    <p>-  외국어(영어) 번역 행정사</p>
+              <div className="mt-6 space-y-2 text-base text-[#33415f] leading-7 font-medium">
+                <p>-  외국어(영어) 번역 행정사</p>
                 <p>-  미국공인회계사 (AICPA)</p>
                 <p>-  미국 주립대 석사 (MBA)</p>
                 <p>-  법원 통·번역인</p>
@@ -54,7 +54,7 @@ export default function Home() {
 
                   <Link
                     href="/apply"
-className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:scale-[1.03] hover:shadow-lg active:scale-[0.98] lg:w-[190px] lg:text-sm"                  >
+                    className="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-6 py-3 text-base font-semibold text-white shadow-md transition hover:scale-[1.03] hover:shadow-lg active:scale-[0.98] lg:w-[190px] lg:text-sm"                  >
                     견적 문의하기
                   </Link>
 
@@ -66,10 +66,10 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
                     }
                     target="_blank"
                     rel="noopener noreferrer"
-                  className="inline-flex w-full items-center justify-center rounded-full border border-[#d6dcf5] bg-[#eef2ff] px-6 py-3 text-base font-semibold text-[#3f4b74] transition hover:bg-[#e4eafe] hover:border-[#c7d0f0] lg:w-[190px] lg:text-sm"
->
-  사례 보기 ↗
-</a>
+                    className="inline-flex w-full items-center justify-center rounded-full border border-[#d6dcf5] bg-[#eef2ff] px-6 py-3 text-base font-semibold text-[#3f4b74] transition hover:bg-[#e4eafe] hover:border-[#c7d0f0] lg:w-[190px] lg:text-sm"
+                  >
+                    사례 보기 ↗
+                  </a>
                 </div>
                 <div className="flex flex-col gap-3 lg:items-end">
 
@@ -95,89 +95,98 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
           </div>
         </section>
 
-       <section id="services" className="bg-[#f5f7fc] py-14">
-  <div className="mx-auto max-w-7xl px-6 lg:px-8">
-    <div className="mb-12 text-center">
-      <h2 className="text-3xl font-bold text-[#2f3a63]">주요 서비스</h2>
-      <p className="mt-3 text-sm text-slate-500 sm:text-base">
-        제출 목적에 맞는 전문 번역 및 인증 서비스를 제공합니다.
-      </p>
-    </div>
-
-    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      {[
-        {
-          no: "01",
-          title: "공문서 번역 및 확인서 발급",
-          desc: "가족관계증명서, 혼인증명서, 생활기록부 등 개인 제출용 각종 증명서 번역 및 확인서 발급 서비스를 제공합니다.",
-          link: isMobile
-            ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
-            : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
-        },
-        {
-          no: "02",
-          title: "국문 번역확인 증명서",
-          desc: "해외 서류의 국내 제출을 위한 번역확인 증명서를 발급합니다.",
-          link: isMobile
-            ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
-            : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
-        },
-        {
-          no: "03",
-          title: "기업 문서 번역",
-          desc: "재무제표, 감사보고서, 법률계약서, 법인 서류, 계약서 등 기업 및 법인 문서 번역을 전문적으로 수행합니다.",
-          link: isMobile
-            ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10"
-            : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",
-        },
-        {
-          no: "04",
-          title: "법원통번역 / 대사관인증",
-          desc: "아포스티유,판결문, 소장, 인증 대행, 번역공증 대행 및 비즈니스 통역을 지원합니다.",
-          link: isMobile
-            ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27"
-            : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27",
-        },
-      ].map((item) => (
-        <a
-          key={item.no}
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#cfd6ea] hover:bg-[#fbfcff] hover:shadow-xl"
-        >
-          <div className="h-8.5 w-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9]" />
-
-          <div className="px-6 py-7">
-            <div className="mb-5 flex justify-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#3f4b74] text-base font-bold text-white shadow-sm">
-                {item.no}
-              </div>
+        <section id="services" className="bg-[#f5f7fc] py-14">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mb-12 text-center">
+              <h2 className="text-3xl font-bold text-[#2f3a63]">주요 서비스</h2>
+              <p className="mt-3 text-sm text-slate-500 sm:text-base">
+                제출 목적에 맞는 전문 번역 및 인증 서비스를 제공합니다.
+              </p>
             </div>
 
-            <h3 className="min-h-[56px] text-center text-xl font-bold leading-snug text-[#2f3a63] transition group-hover:text-[#3f4b74]">
-              {item.title}
-            </h3>
+            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {[
+                {
+                  no: "01",
+                  title: "공문서 번역 및 확인서 발급",
+                  desc: {
+                    mobile: "가족관계증명서, 혼인증명서, 생활기록부 등\n개인 제출용 각종 증명서 번역 및 확인서 발급 서비스를 제공합니다.",
+                    pc: "가족관계증명서, 혼인증명서, 생활기록부 등 개인 제출용 각종 증명서 번역 및 확인서 발급 서비스를 제공합니다.",
+                  },
+                  link: isMobile
+                    ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
+                    : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
+                },
+                {
+                  no: "02",
+                  title: "국문 번역확인 증명서",
+                  desc: {
+                    mobile: "해외 아포스티유, 해외 세무자료, 해외 학위증명서 등\n해외 서류의 국내 제출을 위한 번역확인 증명서를 발급합니다.",
+                    pc: "해외 아포스티유, 해외 세무자료, 해외 학위증명서 등 해외 서류의 국내 제출을 위한 번역확인 증명서를 발급합니다.",
+                  },
+                  link: isMobile
+                    ? "https://m.blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22"
+                    : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
+                },
+                {
+                  no: "03",
+                  title: "기업 문서 번역",
+                  desc: {
+                    mobile: "재무제표, 감사보고서, 법률계약서, 법인 서류, 계약서 등\n기업 및 법인 문서 번역을 전문적으로 수행합니다.",
+                    pc: "재무제표, 감사보고서, 법률계약서, 법인 서류, 계약서 등 기업 및 법인 문서 번역을 전문적으로 수행합니다.",
+                  },
+                  link: isMobile
+                    ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10"
+                    : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",
+                },
+                {
+                  no: "04",
+                  title: "법원통번역 / 대사관인증",
+                  desc: {
+                    mobile: "아포스티유, 판결문, 소장, 인증 대행,\n번역공증 대행 및 비즈니스 통역을 지원합니다.",
+                    pc: "아포스티유, 판결문, 소장, 인증 대행, 번역공증 대행 및 비즈니스 통역을 지원합니다.",
+                  },
+                  link: isMobile
+                    ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27"
+                    : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27",
+                },
+              ].map((item) => (
+                <a
+                  key={item.no}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-sm transition duration-200 hover:-translate-y-1 hover:border-[#cfd6ea] hover:bg-[#fbfcff] hover:shadow-xl"
+                >
+                  <div className="h-8.5 w-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9]" />
 
-<p className="mt-4 text-center text-sm leading-7 text-slate-600 min-h-[96px]">
-                {item.desc}
-            </p>
+                  <div className="px-3 py-2 sm:px-6 sm:py-8 lg:py-10">
+                    <div className="mb-3 flex justify-center">
+                      <div className="flex h-8 w-8 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#3f4b74] text-sm sm:text-base font-bold text-white shadow-sm">
+                        {item.no}
+                      </div>
+                    </div>
 
-<div className="mt-auto pt-6 flex justify-center">
-                <span className="inline-flex items-center rounded-full bg-[#eef2ff] px-4 py-2 text-xs font-semibold text-[#3f4b74] transition group-hover:bg-[#e4eafe]">
-                실제 사례 보기 ↗
-              </span>
+<h3 className="text-center text-base sm:text-xl font-bold leading-snug text-[#2f3a63] lg:mb-4">                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-center lg:text-left text-xs sm:text-sm leading-6 text-slate-600 lg:min-h-[110px] break-keep whitespace-pre-line">
+                      {isMobile ? item.desc.mobile : item.desc.pc}
+                    </p>
+                    <div className="mt-auto pt-4 sm:pt-6 flex justify-center">
+                      <span className="inline-flex items-center rounded-full bg-[#eef2ff] px-4 py-2 text-xs font-semibold text-[#3f4b74] transition group-hover:bg-[#e4eafe]">
+                        실제 사례 보기 ↗
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
-        </a>
-      ))}
-    </div>
-  </div>
-</section>
+        </section>
 
         <section className="bg-white py-12">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-
+          <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-[#2f3a63] mb-6">
               오시는 길
             </h2>
@@ -252,13 +261,13 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
                 제출 국가, 문서 종류, 희망 일정만 알려주시면 진행 가능 여부를 빠르게 안내해드립니다.
               </p>
               <div className="mt-6 flex flex-col items-stretch gap-3 text-sm md:flex-row md:flex-wrap md:items-center">
-       <div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
-  전화: 010-6261-9885
-</div>
+                <div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
+                  전화: 010-6261-9885
+                </div>
 
-<div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
-  이메일: skytruthlee@naver.com
-</div>
+                <div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
+                  이메일: skytruthlee@naver.com
+                </div>
 
                 <a
                   href="https://open.kakao.com/me/love_autumnsky"
@@ -283,7 +292,7 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition"
-                  
+
                 >
                   <img
                     src="/naver.png"
@@ -297,7 +306,7 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
           </div>
         </section>
       </main>
-      
+
       {openModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 px-4">
           <div className="relative max-h-[80vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl">

@@ -320,11 +320,11 @@ export default function Header() {
                     prev === menu.title ? null : menu.title
                   )
                 }
-                className={`flex w-full items-center justify-center gap-2 px-4 py-3 text-white ${
-                  openMobileMenu === menu.title
-                    ? "rounded-t-2xl bg-[#3f4b74]"
-                    : "rounded-2xl bg-[#3f4b74]"
-                }`}
+              className={`flex w-full items-center justify-center gap-2 px-4 py-3 text-white ${
+  openMobileMenu === menu.title
+    ? "rounded-t-2xl bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
+    : "rounded-2xl bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
+}`}
               >
                 <div className="flex-1 text-center">
                   <div className="text-sm font-bold">{menu.title}</div>
@@ -333,13 +333,13 @@ export default function Header() {
                   </p>
                 </div>
 
-                <span
-                  className={`text-sm text-slate-200 transition-transform ${
-                    openMobileMenu === menu.title ? "rotate-180" : ""
-                  }`}
-                >
-                  ▾
-                </span>
+              <span
+  className={`text-lg font-bold text-white transition-transform duration-200 ${
+    openMobileMenu === menu.title ? "rotate-180" : ""
+  }`}
+>
+  ▾
+</span>
               </button>
 
               {openMobileMenu === menu.title && (
