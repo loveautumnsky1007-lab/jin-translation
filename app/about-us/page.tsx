@@ -2,8 +2,18 @@
 
 import Header from "../../components/Header";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function AboutUsPage() {
+  
+const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+  const checkMobile = () => setIsMobile(window.innerWidth < 640);
+  checkMobile();
+  window.addEventListener("resize", checkMobile);
+  return () => window.removeEventListener("resize", checkMobile);
+}, []);
   return (
     <div className="min-h-screen bg-[#f7f8fc] text-slate-800">
       <Header />
@@ -29,15 +39,18 @@ export default function AboutUsPage() {
             </div>
 
             <p className="mt-6 max-w-5xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역,
-              아포스티유 및 대사관 인증까지 정확하고 신속하게 안내하는
-              전문 번역 행정사 사무소입니다.
-              <br />
-              <br />
-              제출 목적과 문서 종류에 따라 필요한 번역, 확인서 발급,
-              인증 절차가 달라질 수 있으며, 각 서류의 성격에 맞춘
-              실무 중심의 안내와 번역 서비스를 제공합니다.
-            </p>
+  영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역,
+  아포스티유 및 대사관 인증까지{" "}
+  <br className="hidden sm:block" />
+  정확하고 신속하게 안내하는 전문 번역 행정사 사무소입니다.
+  <br />
+  <br />
+
+  제출 목적과 문서 종류에 따라 필요한 번역, 확인서 발급,
+  인증 절차가 달라질 수 있으며{" "}
+  <br className="hidden sm:block" />
+  각 서류의 성격에 맞춘 실무 중심의 안내와 번역 서비스를 제공합니다.
+</p>
           </div>
         </section>
 
@@ -118,36 +131,73 @@ export default function AboutUsPage() {
           </div>
         </section>
 
-        <section className="bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
-            <div className="rounded-[28px] bg-[#3f4b74] px-8 py-10 text-white shadow-lg">
-              <h2 className="text-2xl font-bold">상담 및 신청 안내</h2>
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-200 sm:text-base">
-                제출 목적과 문서 종류에 따라 필요한 번역, 확인서 발급,
-                인증 절차가 달라질 수 있습니다. <br/>
-                견적문의하기 또는 카카오톡으로 문의해주시면 빠르게 안내해드립니다.
-              </p>
+        <section id="contact" className="bg-white">
+  <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+    <div className="rounded-[26px] bg-[#3f4b74] px-6 py-8 text-white shadow-lg sm:px-8 lg:px-10 lg:py-10">
+      <div className="max-w-xl">
+        <h2 className="text-xl font-bold sm:text-2xl">
+          빠른 상담 안내
+        </h2>
 
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="/apply"
-                  className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#2f3a63] transition hover:opacity-90"
-                >
-                  견적 문의하기
-                </a>
+        <p className="mt-2 text-xs sm:text-sm text-slate-200">
+          제출 목적과 문서 종류에 따라 필요한 번역, 확인서 발급, 인증 절차가 달라질 수 있습니다. <br/>
+          견적문의하기 또는 카카오톡으로 문의해주시면 빠르게 안내해드립니다.
+        </p>
+      </div>
 
-                <a
-                  href="https://open.kakao.com/me/love_autumnsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 text-sm font-semibold text-black transition hover:brightness-95"
-                >
-                  카카오톡 문의하기
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+     <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+{isMobile ? (
+  <a
+    href="tel:01062619885"
+    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm"
+  >
+    전화 상담 : 010-6261-9885
+  </a>
+) : (
+  <div className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm">
+    전화 상담 : 010-6261-9885
+  </div>
+)}
+{isMobile ? (
+  <a
+    href="mailto:skytruthlee@naver.com"
+    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px- py-3 text-sm font-medium text-white shadow-sm"
+  >
+    이메일 : skytruthlee@naver.com
+  </a>
+) : (
+  <div className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm">
+    이메일 : skytruthlee@naver.com
+  </div>
+)}
+
+  <a
+    href="https://open.kakao.com/me/love_autumnsky"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 rounded-xl bg-[#FEE500] px-4 py-3 text-sm font-semibold text-black shadow-sm transition hover:brightness-95"
+  >
+    <img src="/kakao.png" className="h-4 w-4" alt="카카오톡" />
+    카카오톡 상담
+  </a>
+
+  <a
+    href={
+      isMobile
+        ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee"
+        : "https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+    }
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 rounded-xl bg-[#03C75A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
+  >
+    <img src="/naver.png" className="h-4 w-4" alt="블로그 방문" />
+    블로그 방문
+  </a>
+</div>
+    </div>
+  </div>
+</section>
       </main>
     </div>
   );

@@ -282,7 +282,8 @@ export default function Home() {
         </h2>
 
         <p className="mt-2 text-xs sm:text-sm text-slate-200">
-          제출 국가, 문서 종류, 희망 일정만 알려주시면 빠르게 안내해드립니다.
+          제출 목적과 문서 종류에 따라 필요한 번역, 확인서 발급, 인증 절차가 달라질 수 있습니다. <br/>
+          견적문의하기 또는 카카오톡으로 문의해주시면 빠르게 안내해드립니다.
         </p>
       </div>
 
