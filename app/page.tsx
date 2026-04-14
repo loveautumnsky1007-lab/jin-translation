@@ -241,7 +241,7 @@ export default function Home() {
           <div className="space-y-3 text-sm leading-7 text-slate-600">
           <div className="space-y-3 text-sm leading-7 text-slate-600">
   <p className="flex items-center gap-2">
-    판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을  <br/>신규 오픈했습니다.
+    판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을 신규 오픈했습니다.
   </p>
 
   <p className="flex items-center gap-2">
