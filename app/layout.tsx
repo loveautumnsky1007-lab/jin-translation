@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "국제자문번역행정사사무소",
     images: [
       {
-        url: "https://kjtranslate.com/hero-bgs-thumbnail.png",
+        url: "https://kjtranslate.com/opengraph.png",
         width: 1200,
         height: 630,
       },
