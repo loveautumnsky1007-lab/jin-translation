@@ -19,16 +19,16 @@ export default function Header() {
     return () => window.removeEventListener("resize", check);
   }, []);
   useEffect(() => {
-  if (mobileOpen) {
-    document.body.style.overflow = "hidden";
-  } else {
-    document.body.style.overflow = "";
-  }
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
 
-  return () => {
-    document.body.style.overflow = "";
-  };
-}, [mobileOpen]);
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   const menuItems = [
     {
@@ -166,9 +166,9 @@ export default function Header() {
   ];
 
   return (
-<header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur relative">
+    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur relative">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-               <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/kj-logo.png"
             alt="KJ 로고"
@@ -236,22 +236,20 @@ export default function Header() {
 
           <Link
             href="/about-us"
-            className={`block py-3 text-[15px] font-semibold transition ${
-              pathname === "/about-us"
+            className={`block py-3 text-[15px] font-semibold transition ${pathname === "/about-us"
                 ? "border-b-2 border-[#3f4b74] text-[#3f4b74]"
                 : "text-[#33415f] hover:text-[#3f4b74]"
-            }`}
+              }`}
           >
             About Us
           </Link>
 
           <Link
             href="/apply"
-            className={`relative hidden rounded-full px-5 py-2.5 text-sm font-semibold text-white transition lg:inline-flex ${
-              pathname === "/apply"
+            className={`relative hidden rounded-full px-5 py-2.5 text-sm font-semibold text-white transition lg:inline-flex ${pathname === "/apply"
                 ? "bg-[#2f3a63]"
                 : "bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
-            }`}
+              }`}
           >
             견적문의
 
@@ -270,120 +268,117 @@ export default function Header() {
               return next;
             });
           }}
-          className={`inline-flex items-center justify-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition lg:hidden ${
-            mobileOpen
+          className={`inline-flex items-center justify-center gap-1 rounded-lg px-3 py-2 text-sm font-semibold transition lg:hidden ${mobileOpen
               ? "bg-[#3f4b74] text-white"
               : "border border-slate-300 text-[#33415f]"
-          }`}
+            }`}
         >
           {mobileOpen ? "✕ 닫기" : "☰ 메뉴"}
         </button>
       </div>
 
-     {mobileOpen && (
-  <div className="absolute left-0 right-0 top-full z-40 border-t border-slate-200 bg-white lg:hidden">
-    <div className="h-[calc(100dvh-73px)] overflow-y-auto">
-      <div className="mx-auto max-w-7xl px-4 py-4">
-        <div className="space-y-4">
-          <div className="overflow-hidden rounded-2xl border border-slate-200">
-            <Link
-              href="/about-us"
-              className="block bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-4 py-3 text-center text-sm font-bold text-white shadow-md transition active:scale-[0.98]"
-              onClick={() => {
-                setMobileOpen(false);
-                setOpenMobileMenu(null);
-              }}
-            >
-              About Us
-            </Link>
-          </div>
-
-          <div className="overflow-hidden rounded-2xl border border-slate-200">
-            <Link
-              href="/apply"
-              className="block bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-4 py-3 text-center text-sm font-bold text-white shadow-md transition active:scale-[0.98]"
-              onClick={() => {
-                setMobileOpen(false);
-                setOpenMobileMenu(null);
-              }}
-            >
-              견적 문의하기
-            </Link>
-          </div>
-
-          {menuItems.map((menu) => (
-            <div key={menu.title} className="rounded-2xl border border-slate-200">
-              <button
-                type="button"
-                onClick={() =>
-                  setOpenMobileMenu((prev) =>
-                    prev === menu.title ? null : menu.title
-                  )
-                }
-              className={`flex w-full items-center justify-center gap-2 px-4 py-3 text-white ${
-  openMobileMenu === menu.title
-    ? "rounded-t-2xl bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
-    : "rounded-2xl bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
-}`}
-              >
-                <div className="flex-1 text-center">
-                  <div className="text-sm font-bold">{menu.title}</div>
-                  <p className="mt-1 text-[11px] leading-5 text-slate-200">
-                    {menu.mobileHint}
-                  </p>
+      {mobileOpen && (
+        <div className="absolute left-0 right-0 top-full z-40 border-t border-slate-200 bg-white lg:hidden">
+          <div className="h-[calc(100dvh-73px)] overflow-y-auto">
+            <div className="mx-auto max-w-7xl px-4 py-4">
+              <div className="space-y-4">
+                <div className="overflow-hidden rounded-2xl border border-slate-200">
+                  <Link
+                    href="/about-us"
+                    className="block bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-4 py-3 text-center text-sm font-bold text-white shadow-md transition active:scale-[0.98]"
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setOpenMobileMenu(null);
+                    }}
+                  >
+                    About Us
+                  </Link>
                 </div>
 
-              <span
-  className={`text-lg font-bold text-white transition-transform duration-200 ${
-    openMobileMenu === menu.title ? "rotate-180" : ""
-  }`}
->
-  ▾
-</span>
-              </button>
+                <div className="overflow-hidden rounded-2xl border border-slate-200">
+                  <Link
+                    href="/apply"
+                    className="block bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-4 py-3 text-center text-sm font-bold text-white shadow-md transition active:scale-[0.98]"
+                    onClick={() => {
+                      setMobileOpen(false);
+                      setOpenMobileMenu(null);
+                    }}
+                  >
+                    견적 문의하기
+                  </Link>
+                </div>
 
-              {openMobileMenu === menu.title && (
-                <ul className="space-y-1 px-3 py-3">
-                  {menu.children.map((child) => (
-                    <li key={child.name}>
-                      <a
-                        href={child.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1 rounded-xl px-3 py-2 text-center text-sm text-slate-700 hover:bg-[#f1f4fb]"
-                        onClick={() => {
-                          setMobileOpen(false);
-                          setOpenMobileMenu(null);
-                        }}
+                {menuItems.map((menu) => (
+                  <div key={menu.title} className="rounded-2xl border border-slate-200">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setOpenMobileMenu((prev) =>
+                          prev === menu.title ? null : menu.title
+                        )
+                      }
+                      className={`flex w-full items-center justify-center gap-2 px-4 py-3 text-white ${openMobileMenu === menu.title
+                          ? "rounded-t-2xl bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
+                          : "rounded-2xl bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf]"
+                        }`}
+                    >
+                      <div className="flex-1 text-center">
+                        <div className="text-sm font-bold">{menu.title}</div>
+                        <p className="mt-1 text-[11px] leading-5 text-slate-200">
+                          {menu.mobileHint}
+                        </p>
+                      </div>
+
+                      <span
+                        className={`text-lg font-bold text-white transition-transform duration-200 ${openMobileMenu === menu.title ? "rotate-180" : ""
+                          }`}
                       >
-                        <span>{child.name}</span>
-                        <span className="text-xs text-slate-400">↗</span>
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
+                        ▾
+                      </span>
+                    </button>
 
-          <a
-            href="https://open.kakao.com/me/love_autumnsky"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-5 py-3 text-sm font-semibold text-black shadow-md active:scale-[0.98]"
-            onClick={() => {
-              setMobileOpen(false);
-              setOpenMobileMenu(null);
-            }}
-          >
-            <img src="/kakao.png" className="h-4 w-4" alt="카카오톡" />
-            카카오톡 문의하기
-          </a>
+                    {openMobileMenu === menu.title && (
+                      <ul className="space-y-1 px-3 py-3">
+                        {menu.children.map((child) => (
+                          <li key={child.name}>
+                            <a
+                              href={child.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center justify-center gap-1 rounded-xl px-3 py-2 text-center text-sm text-slate-700 hover:bg-[#f1f4fb]"
+                              onClick={() => {
+                                setMobileOpen(false);
+                                setOpenMobileMenu(null);
+                              }}
+                            >
+                              <span>{child.name}</span>
+                              <span className="text-xs text-slate-400">↗</span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                ))}
+
+                <a
+                  href="https://open.kakao.com/me/love_autumnsky"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-5 py-3 text-sm font-semibold text-black shadow-md active:scale-[0.98]"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    setOpenMobileMenu(null);
+                  }}
+                >
+                  <img src="/kakao.png" className="h-4 w-4" alt="카카오톡" />
+                  카카오톡 문의하기
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
     </header>
   );
 }

@@ -185,126 +185,160 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white py-12">
-          <div className="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-[#2f3a63] mb-6">
-              오시는 길
-            </h2>
+      <section className="bg-white py-14">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div className="mb-8 text-center lg:mb-10">
+      <h2 className="text-3xl font-bold tracking-tight text-[#2f3a63]">
+        오시는 길
+      </h2>
+      <p className="mt-3 text-sm text-slate-500 sm:text-base">
+        서현동 사무실 위치와 방문 안내를 확인하실 수 있습니다.
+      </p>
+    </div>
 
-            <div className="grid gap-8 lg:grid-cols-2">
-
-              {/* 지도 */}
-              <a
-                href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block overflow-hidden rounded-2xl border shadow hover:shadow-lg transition"
-              >
-                <img
-                  src="/map.png"
-                  alt="사무소 위치"
-                  className="w-full h-[220px] sm:h-[300px] lg:h-[400px] object-cover"
-                />
-              </a>
-
-              {/* 주소 정보 */}
-              <div className="flex flex-col justify-center space-y-2">
-                <h3 className="text-lg font-semibold text-[#2f3a63]">
-                  국제자문번역행정사사무소
-                </h3>
-
-                <p className="text-sm text-slate-600">
-                  경기도 성남시 분당구 황새울로 351번길 10, 401-B12 (서현동, 여암빌딩) <br /> <br />
-
-
-                </p>
-                {/* PC용 (점 있음) */}
-                <p className="hidden lg:block text-sm text-slate-600 leading-7">
-                  · 판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을 신규 오픈했습니다.<br />
-                  · 서현점 주차는 풍림아이원에서 2시간 무료 등록 가능합니다. <br />
-                  · 방문 전에는 미리 연락주세요.
-                </p>
-
-                {/* 모바일용 (점 제거 + 간격 넓게) */}
-                <p className="block lg:hidden text-sm text-slate-600 leading-7">
-                  판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을 신규 오픈했습니다.<br /><br />
-                  서현점 주차는 풍림아이원에서 2시간 무료 등록 가능합니다. <br /><br />
-                  방문 전에는 미리 연락주세요.
-                </p>
-
-
-
-
-                <a
-                  href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 mx-auto flex w-fit items-center justify-center rounded-full bg-[#03C75A] px-7 py-3 text-sm font-semibold  text-white hover:opacity-90 lg:mx-0"        >
-
-                  <img
-                    src="/naver_map.png"
-                    alt="지도"
-                    className="mr-2 h-4 w-4 object-contain"
-                  />
-                  네이버 지도에서 보기
-                </a>
-              </div>
-
-            </div>
+    <div className="rounded-[28px] border border-slate-200 bg-[#f8faff] p-4 shadow-sm sm:p-6 lg:p-8">
+      <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
+        {/* 지도 */}
+        <a
+          href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group block overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+        >
+          <img
+            src="/map.png"
+            alt="사무소 위치"
+            className="h-[260px] w-full object-cover sm:h-[320px] lg:h-[400px]"
+          />
+          <div className="flex items-center justify-between border-t border-slate-100 px-4 py-3">
+            <span className="text-sm font-medium text-[#2f3a63]">
+              네이버 지도에서 위치 확인  
+            </span>
+            <span className="text-sm text-slate-400 transition group-hover:text-[#2f3a63]">
+              ↗
+            </span>
           </div>
-        </section>
-        <section id="contact" className="bg-white">
-          <div className="mx-auto max-w-7xl px-6 py-10 lg:px-8">
-            <div className="rounded-[28px] bg-[#3f4b74] px-8 py-10 text-white shadow-lg">
-              <h2 className="text-2xl font-bold">빠른 상담 안내</h2>
-              <p className="mt-3 text-sm text-slate-200">
-                제출 국가, 문서 종류, 희망 일정만 알려주시면 진행 가능 여부를 빠르게 안내해드립니다.
-              </p>
-              <div className="mt-6 flex flex-col items-stretch gap-3 text-sm md:flex-row md:flex-wrap md:items-center">
-                <div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
-                  전화: 010-6261-9885
-                </div>
+        </a>
 
-                <div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
-                  이메일: skytruthlee@naver.com
-                </div>
-
-                <a
-                  href="https://open.kakao.com/me/love_autumnsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-[#FEE500] px-6 py-3 font-semibold text-black shadow-md transition hover:brightness-95"
-                >
-                  <img
-                    src="/kakao.png"
-                    alt="카카오톡"
-                    className="mr-2 h-4 w-4 object-contain"
-                  />
-                  카카오톡 상담하기
-                </a>
-
-                <a
-                  href={
-                    isMobile
-                      ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee"
-                      : "https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-                  }
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition"
-
-                >
-                  <img
-                    src="/naver.png"
-                    alt="블로그 방문"
-                    className="mr-2 h-4 w-4 object-contain"
-                  />
-                  블로그 방문 (사례보기)
-                </a>
-              </div>
-            </div>
+        {/* 정보 */}
+        <div className="flex flex-col justify-center rounded-[24px] bg-white px-5 py-6 shadow-sm sm:px-6 lg:px-8">
+          <div className="inline-flex w-fit rounded-full bg-[#eef2ff] px-3 py-1 text-xs font-semibold text-[#3f4b74]">
+            OFFICE INFO
           </div>
-        </section>
+
+          <h3 className="mt-4 text-2xl font-bold text-[#2f3a63]">
+            국제자문번역행정사사무소
+          </h3>
+
+          <p className="mt-4 text-sm leading-7 text-slate-600">
+            경기도 성남시 분당구 황새울로 351번길 10, 401-B12
+            <br />
+            (서현동, 여암빌딩)
+          </p>
+
+          <div className="my-6 h-px w-full bg-slate-200" />
+
+          <div className="space-y-3 text-sm leading-7 text-slate-600">
+          <div className="space-y-3 text-sm leading-7 text-slate-600">
+  <p className="flex items-center gap-2">
+    판교 테크노밸리 창조경제 혁신센터 사무실에 이어 서현동 사무실을  <br/>신규 오픈했습니다.
+  </p>
+
+  <p className="flex items-center gap-2">
+    서현점 주차는 풍림아이원에서 2시간 무료 등록 가능합니다.
+  </p>
+
+  <p className="flex items-center gap-2">
+    방문 전에는 미리 연락주세요.
+  </p>
+</div>
+          </div>
+
+          <a
+            href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex w-fit items-center justify-center rounded-full bg-[#03C75A] px-7 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90"
+          >
+            <img
+              src="/naver_map.png"
+              alt="지도"
+              className="mr-2 h-4 w-4 object-contain"
+            />
+            네이버 지도에서 보기
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="contact" className="bg-white">
+  <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
+    <div className="rounded-[26px] bg-[#3f4b74] px-6 py-8 text-white shadow-lg sm:px-8 lg:px-10 lg:py-10">
+      <div className="max-w-xl">
+        <h2 className="text-xl font-bold sm:text-2xl">
+          빠른 상담 안내
+        </h2>
+
+        <p className="mt-2 text-xs sm:text-sm text-slate-200">
+          제출 국가, 문서 종류, 희망 일정만 알려주시면 빠르게 안내해드립니다.
+        </p>
+      </div>
+
+     <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
+{isMobile ? (
+  <a
+    href="tel:01062619885"
+    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm"
+  >
+    전화 상담 : 010-6261-9885
+  </a>
+) : (
+  <div className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm">
+    전화 상담 : 010-6261-9885
+  </div>
+)}
+{isMobile ? (
+  <a
+    href="mailto:skytruthlee@naver.com"
+    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px- py-3 text-sm font-medium text-white shadow-sm"
+  >
+    이메일 : skytruthlee@naver.com
+  </a>
+) : (
+  <div className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm">
+    이메일 : skytruthlee@naver.com
+  </div>
+)}
+
+  <a
+    href="https://open.kakao.com/me/love_autumnsky"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 rounded-xl bg-[#FEE500] px-4 py-3 text-sm font-semibold text-black shadow-sm transition hover:brightness-95"
+  >
+    <img src="/kakao.png" className="h-4 w-4" alt="카카오톡" />
+    카카오톡 상담
+  </a>
+
+  <a
+    href={
+      isMobile
+        ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee"
+        : "https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+    }
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center gap-2 rounded-xl bg-[#03C75A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
+  >
+    <img src="/naver.png" className="h-4 w-4" alt="블로그 방문" />
+    블로그 방문
+  </a>
+</div>
+    </div>
+  </div>
+</section>
       </main>
 
       {openModal && (
