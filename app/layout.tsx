@@ -47,7 +47,25 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
             <Analytics />
-      <body className="min-h-full flex flex-col">{children}
+      <body className="min-h-full flex flex-col">
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      name: "국제자문번역행정사사무소",
+      url: "https://kjtranslate.com",
+      image: "https://kjtranslate.com/opengraph.png",
+      logo: "https://kjtranslate.com/kj-logo.png",
+      description:
+        "분당 판교 영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역, 아포스티유, 대사관 인증 서비스를 제공합니다.",
+    }),
+  }}
+/>
+        
+        {children}
+        
       <Footer />
       </body>
     </html>
