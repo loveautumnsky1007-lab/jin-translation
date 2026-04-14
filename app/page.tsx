@@ -236,13 +236,13 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
                 제출 국가, 문서 종류, 희망 일정만 알려주시면 진행 가능 여부를 빠르게 안내해드립니다.
               </p>
               <div className="mt-6 flex flex-col items-stretch gap-3 text-sm md:flex-row md:flex-wrap md:items-center">
-                <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
-                  전화: 010-6261-9885
-                </div>
+       <div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
+  전화: 010-6261-9885
+</div>
 
-                <div className="rounded-full bg-white/10 px-6 py-3 text-center whitespace-nowrap">
-                  이메일: skytruthlee@naver.com
-                </div>
+<div className="rounded-full bg-white/20 px-6 py-3 text-center text-white backdrop-blur border border-white/20 shadow-md">
+  이메일: skytruthlee@naver.com
+</div>
 
                 <a
                   href="https://open.kakao.com/me/love_autumnsky"
@@ -267,6 +267,7 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center rounded-full bg-[#03C75A] px-6 py-3 font-semibold text-white shadow-md transition"
+                  
                 >
                   <img
                     src="/naver.png"
@@ -280,52 +281,7 @@ className="inline-flex w-full items-center justify-center rounded-full bg-gradie
           </div>
         </section>
       </main>
-      <footer className="bg-[#f4f4f4] text-[#333] mt-0 border-t">
-        <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8 text-center text-sm text-gray-600 leading-6">
-          <p className="font-semibold text-gray-800">
-            국제자문번역행정사사무소
-          </p>
-
-          <p>
-            상호 : 국제자문번역행정사사무소 | 대표 : 이호진
-          </p>
-
-          <p>
-            주소 : 경기도 성남시 분당구 황새울로 351번길 10, 401-B12 (서현동, 여암빌딩)
-          </p>
-
-          <p>
-            전화 : 010-6261-9885 | 메일 : skytruthlee@naver.com
-          </p>
-
-          <p>
-            사업자번호 : 404-40-00718
-          </p>
-          <div className="mt-3 flex items-center justify-center gap-2 text-xs">
-            <button
-              type="button"
-              onClick={() => setOpenModal("terms")}
-              className="rounded px-2 py-1 text-gray-500 transition hover:bg-gray-200 hover:text-[#2f3a63] cursor-pointer"
-            >
-              이용약관
-            </button>
-
-            <span className="text-gray-300">|</span>
-
-            <button
-              type="button"
-              onClick={() => setOpenModal("privacy")}
-              className="rounded px-2 py-1 text-gray-500 transition hover:bg-gray-200 hover:text-[#2f3a63] cursor-pointer"
-            >
-              개인정보처리방침
-            </button>
-          </div>
-
-          <p className="text-xs text-gray-400 mt-2">
-            © {new Date().getFullYear()} 국제자문번역행정사사무소. All Rights Reserved.
-          </p>
-        </div>
-      </footer>
+      
       {openModal && (
         <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/50 px-4">
           <div className="relative max-h-[80vh] w-full max-w-3xl overflow-y-auto rounded-2xl bg-white p-6 shadow-2xl">

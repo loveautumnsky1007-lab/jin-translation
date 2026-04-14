@@ -219,7 +219,7 @@ export default function ApplyPage() {
                   </div>
 
                   <div className="rounded-2xl border border-slate-200 bg-[#f8f9fd] p-4">
-                    <div className="h-72 overflow-y-auto rounded-xl border border-slate-200 bg-white p-5 text-sm leading-7 text-slate-700">
+                    <div className="h-36 overflow-y-auto rounded-xl border border-slate-200 bg-white p-5 text-sm leading-7 text-slate-700">
                       <p className="font-semibold text-[#2f3a63]">
                         &lt;개인정보 수집 및 이용에 대한 동의&gt;
                       </p>
@@ -343,11 +343,11 @@ export default function ApplyPage() {
                       </div>
                     </section>
 
-                    <section className="hidden lg:block lg:col-start-1 lg:row-start-2">
-                      <div className="mb-4">
+<section className="hidden lg:block lg:col-start-1 lg:row-start-2 lg:mt-15">
+                        <div className="mb-4">
                         <h3 className="text-xl font-bold text-[#2f3a63]">등기 수령 주소 (우편 수령 희망시 입력)</h3>
                         <p className="mt-1 text-sm text-slate-500">
-                          번역본을 우편(등기)으로 받기를 희망하시는 경우 입력해주세요.
+                          번역본을 우편(등기)으로 받기를 희망하시는 경우 입력해주세요. <br/> 등기비용은 저희가 부담합니다.
                         </p>
                       </div>
 
@@ -508,18 +508,18 @@ export default function ApplyPage() {
                             <option>출생증명서</option>
                             <option>사망증명서</option>
                             <option>성적증명서</option>
+                            <option>생활기록부</option>
                             <option>학위증</option>
                             <option>재직증명서</option>
-
                             <option disabled>📄 기업 서류</option>
                             <option>사업자등록증</option>
                             <option>법인등기부등본</option>
                             <option>계약서</option>
 
-                            <option disabled>📄  법원 서류</option>
+                            <option disabled>📄 법원 서류</option>
                             <option>판결문</option>
 
-                            <option disabled>📄  기타</option>
+                            <option disabled>📄 기타</option>
                             <option value="direct">직접 입력</option>
                           </select>
 
