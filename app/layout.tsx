@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "국제자문번역행정사사무소",
     images: [
       {
-        url: "https://kjtranslate.com/opengraph.png",
+        url: "https://kjtranslate.com/opengraph2.png",
         width: 1200,
         height: 630,
       },
@@ -56,7 +56,7 @@ export default function RootLayout({
       "@type": "LocalBusiness",
       name: "국제자문번역행정사사무소",
       url: "https://kjtranslate.com",
-      image: "https://kjtranslate.com/opengraph.png",
+      image: "https://kjtranslate.com/opengraph2.png",
       logo: "https://kjtranslate.com/kj-logo.png",
       description:
         "분당 판교 영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역, 아포스티유, 대사관 인증 서비스를 제공합니다.",
