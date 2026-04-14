@@ -135,7 +135,7 @@ export default function Header() {
       link: isMobile
         ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27"
         : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=27",
-      mobileHint: "법원 문서, 공증, 인증 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
+      mobileHint: "법원 문서, 공증 관련 실제 번역 사례를 블로그에서 확인하실 수 있습니다.",
       children: [
         {
           name: "판결문 / 소장 / 법원문서 번역",
@@ -361,19 +361,20 @@ export default function Header() {
                   </div>
                 ))}
 
-                <a
-                  href="https://open.kakao.com/me/love_autumnsky"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-5 py-3 text-sm font-semibold text-black shadow-md active:scale-[0.98]"
-                  onClick={() => {
-                    setMobileOpen(false);
-                    setOpenMobileMenu(null);
-                  }}
-                >
-                  <img src="/kakao.png" className="h-4 w-4" alt="카카오톡" />
-                  카카오톡 문의하기
-                </a>
+<div className="overflow-hidden rounded-2xl border border-slate-200">
+  <a
+    href="https://open.kakao.com/me/love_autumnsky"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block rounded-2xl bg-[#FEE500] px-4 py-3 text-center text-sm font-bold text-black shadow-md transition active:scale-[0.98]"
+    onClick={() => {
+      setMobileOpen(false);
+      setOpenMobileMenu(null);
+    }}
+  >
+    카카오톡 문의하기
+  </a>
+</div>
               </div>
             </div>
           </div>
