@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import { Analytics } from '@vercel/analytics/react';
-import Footer from "../components/Footer"; // 경로 맞게 수정
+import { Analytics } from "@vercel/analytics/react";
+import Footer from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,13 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
- title: "국제자문번역행정사사무소 | 분당 판교 번역·공증·아포스티유·대사관 인증",
+  title: "국제자문번역행정사사무소 | 분당 판교 번역·공증·아포스티유·대사관 인증",
   description:
     "분당 판교 번역행정사 사무소. 일반번역·기업번역·공증·아포스티유·대사관 인증 서비스를 제공합니다.",
-
   openGraph: {
     title: "국제자문번역행정사사무소",
-    description:"분당 판교 번역행정사 사무소. 일반번역·기업번역·공증·아포스티유·대사관 인증 서비스를 제공합니다.",
+    description:
+      "분당 판교 번역행정사 사무소. 일반번역·기업번역·공증·아포스티유·대사관 인증 서비스를 제공합니다.",
     url: "https://kjtranslate.com",
     siteName: "국제자문번역행정사사무소",
     images: [
@@ -43,30 +44,35 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="ko"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-            <Analytics />
       <body className="min-h-full flex flex-col">
+        <Analytics />
+
+        <Script
+          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID}`}
+          strategy="beforeInteractive"
+        />
+
         <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "국제자문번역행정사사무소",
-      url: "https://kjtranslate.com",
-      image: "https://kjtranslate.com/opengraph2.png",
-      logo: "https://kjtranslate.com/kj-logo.png",
-      description:
-        "분당 판교 영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역, 아포스티유, 대사관 인증 서비스를 제공합니다.",
-    }),
-  }}
-/>
-        
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "국제자문번역행정사사무소",
+              url: "https://kjtranslate.com",
+              image: "https://kjtranslate.com/opengraph2.png",
+              logo: "https://kjtranslate.com/kj-logo.png",
+              description:
+                "분당 판교 영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역, 아포스티유, 대사관 인증 서비스를 제공합니다.",
+            }),
+          }}
+        />
+
         {children}
-        
-      <Footer />
+        <Footer />
       </body>
     </html>
   );

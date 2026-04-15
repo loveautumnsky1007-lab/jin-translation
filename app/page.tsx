@@ -2,6 +2,8 @@
 import Header from "../components/Header";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import NaverMap from "../components/NaverMap";
+
 export default function Home() {
   const [openModal, setOpenModal] = useState<"terms" | "privacy" | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -199,26 +201,28 @@ export default function Home() {
     <div className="rounded-[28px] border border-slate-200 bg-[#f8faff] p-4 shadow-sm sm:p-6 lg:p-8">
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         {/* 지도 */}
-        <a
-          href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group block overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-md"
-        >
-          <img
-            src="/map.png"
-            alt="사무소 위치"
-            className="h-[260px] w-full object-cover sm:h-[320px] lg:h-[400px]"
-          />
-          <div className="flex items-center justify-between border-t border-slate-100 px-4 py-3">
-            <span className="text-sm font-medium text-[#2f3a63]">
-              네이버 지도에서 위치 확인  
-            </span>
-            <span className="text-sm text-slate-400 transition group-hover:text-[#2f3a63]">
-              ↗
-            </span>
-          </div>
-        </a>
+       <div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm">
+  <NaverMap
+    lat={37.3859}
+    lng={127.1233}
+    title="국제자문번역행정사사무소"
+  />
+
+  <div className="flex items-center justify-between border-t border-slate-100 px-4 py-3">
+    <span className="text-sm font-medium text-[#2f3a63]">
+      실시간 네이버 지도
+    </span>
+
+    <a
+      href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100?c=15.00,0,0,0,dh&isCorrectAnswer=true&placePath=/home?from=map&fromPanelNum=1&additionalHeight=76&timestamp=202604130300&locale=ko&svcName=map_pcv5&searchText=%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-slate-400 transition hover:text-[#2f3a63]"
+    >
+      ↗
+    </a>
+  </div>
+</div>
 
         {/* 정보 */}
         <div className="flex flex-col justify-center rounded-[24px] bg-white px-5 py-6 shadow-sm sm:px-6 lg:px-8">
