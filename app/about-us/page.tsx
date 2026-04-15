@@ -166,9 +166,12 @@ useEffect(() => {
     견적 문의하기
   </a>
 ) : (
-  <div className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm">
+   <a
+    href="/apply"
+    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px- py-3 text-sm font-medium text-white shadow-sm"
+  >
     견적 문의하기
-  </div>
+  </a>
 )}
 
   <a
