@@ -347,7 +347,7 @@ export default function ApplyPage() {
                         <div className="mb-4">
                         <h3 className="text-xl font-bold text-[#2f3a63]">등기 수령 주소 (우편 수령 희망시 입력)</h3>
                         <p className="mt-1 text-sm text-slate-500">
-                          번역본을 우편(등기)으로 받기를 희망하시는 경우 입력해주세요. <br/> 등기비용은 저희가 부담합니다.
+                          번역본을 우편(등기)으로 받기를 희망하시는 경우 입력해주세요.
                         </p>
                       </div>
 
