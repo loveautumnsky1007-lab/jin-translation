@@ -37,12 +37,15 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const naverMapKey =
+    process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID?.trim() ?? "";
+
   return (
     <html
       lang="ko"
@@ -50,27 +53,13 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Analytics />
-<Script
-     src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${naverMapKey}`}
 
-  strategy="beforeInteractive"
-/>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              name: "국제자문번역행정사사무소",
-              url: "https://kjtranslate.com",
-              image: "https://kjtranslate.com/opengraph2.png",
-              logo: "https://kjtranslate.com/kj-logo.png",
-              description:
-                "분당 판교 영문 번역, 국문 번역확인 증명서, 기업번역, 법원통번역, 아포스티유, 대사관 인증 서비스를 제공합니다.",
-            }),
-          }}
-        />
+        {naverMapKey && (
+          <Script
+            src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${naverMapKey}`}
+            strategy="beforeInteractive"
+          />
+        )}
 
         {children}
         <Footer />
