@@ -49,11 +49,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Analytics />
-
-        <Script
-          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID}`}
-          strategy="beforeInteractive"
-        />
+<Script
+  src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ecwob75ngt"
+  strategy="beforeInteractive"
+/>
 
         <script
           type="application/ld+json"
