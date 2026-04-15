@@ -303,11 +303,10 @@ export default function ApplyPage() {
                         <div className="space-y-2">
                           {[
                             "번역",
+                            "기업번역",
                             "번역 인증 / 공증",
-                            "아포스티유 / 대사관인증",
-                            "미성년자 부모동의서",
-                            "다국어 녹취록",
                             "증명서 발급대행",
+                            "아포스티유 / 대사관인증",
                             "기타 상담",
                           ].map((item) => (
                             <label
@@ -343,7 +342,7 @@ export default function ApplyPage() {
                       </div>
                     </section>
 
-<section className="hidden lg:block lg:col-start-1 lg:row-start-2 lg:mt-15">
+<section className="hidden lg:block lg:col-start-1 lg:row-start-2 lg:mt-23">
                         <div className="mb-4">
                         <h3 className="text-xl font-bold text-[#2f3a63]">등기 수령 주소 (우편 수령 희망시 입력)</h3>
                         <p className="mt-1 text-sm text-slate-500">
@@ -502,7 +501,7 @@ export default function ApplyPage() {
                             onChange={(e) => setDocumentType(e.target.value)}
                             className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-[#3f4b74]"
                           >
-                            <option disabled>📄 개인 서류</option>
+                            <option disabled>개인 서류</option>
                             <option>가족관계증명서</option>
                             <option>기본증명서</option>
                             <option>혼인관계증명서</option>
@@ -512,15 +511,15 @@ export default function ApplyPage() {
                             <option>생활기록부</option>
                             <option>학위증</option>
                             <option>재직증명서</option>
-                            <option disabled>📄 기업 서류</option>
+                            <option disabled>기업 서류</option>
                             <option>사업자등록증</option>
                             <option>법인등기부등본</option>
                             <option>계약서</option>
 
-                            <option disabled>📄 법원 서류</option>
+                            <option disabled>법원 서류</option>
                             <option>판결문</option>
 
-                            <option disabled>📄 기타</option>
+                            <option disabled>기타</option>
                             <option value="direct">직접 입력</option>
                           </select>
 
@@ -548,6 +547,7 @@ export default function ApplyPage() {
                           />
                         </div>
 
+                          
                         <div className="block lg:hidden">
                           <div className="mb-4 mt-8">
                             <h3 className="text-xl font-bold text-[#2f3a63]">등기 수령 주소 (우편 수령 희망시 입력)</h3>
