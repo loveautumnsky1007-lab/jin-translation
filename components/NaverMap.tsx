@@ -52,15 +52,23 @@ export default function NaverMap({
         map,
         title,
       });
-
-      const infoWindow = new window.naver.maps.InfoWindow({
-        content: `
-          <div style="padding:10px 14px; font-size:14px; line-height:1.5;">
-            <strong>${title}</strong><br/>
-            경기도 성남시 분당구 황새울로351번길 10, 401-B12
-          </div>
-        `,
-      });
+const infoWindow = new window.naver.maps.InfoWindow({
+  content: `
+    <div style="padding:10px 14px; font-size:14px; line-height:1.5; cursor:pointer;">
+      <a 
+        href="https://map.naver.com/p/search/%EA%B5%AD%EC%A0%9C%EC%9E%90%EB%AC%B8%EB%B2%88%EC%97%AD%ED%96%89%EC%A0%95%EC%82%AC%EC%82%AC%EB%AC%B4%EC%86%8C/place/1786107100"
+        target="_blank"
+        style="text-decoration:none; color:#2f3a63;"
+      >
+        <strong>${title}</strong><br/>
+        경기도 성남시 분당구 황새울로351번길 10, 401-B12
+        <div style="margin-top:6px; font-size:12px; color:#6b7280;">
+          클릭 시 네이버 지도 이동 ↗
+        </div>
+      </a>
+    </div>
+  `,
+});
 
       window.naver.maps.Event.addListener(marker, "click", () => {
         if (infoWindow.getMap()) {
@@ -78,5 +86,4 @@ export default function NaverMap({
     };
   }, [lat, lng, title]);
 
-  return <div ref={mapRef} className="h-[260px] w-full sm:h-[320px] lg:h-[400px]" />;
-}
+return <div ref={mapRef} className="h-full w-full" />;}
