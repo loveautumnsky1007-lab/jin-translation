@@ -20,43 +20,62 @@ export default function NaverMap({
   title = "국제자문번역행정사사무소",
 }: NaverMapProps) {
   const mapRef = useRef<HTMLDivElement | null>(null);
+  const initializedRef = useRef(false);
 
   useEffect(() => {
-    if (!mapRef.current || !window.naver?.maps) return;
+    let retryId: NodeJS.Timeout;
 
-    const location = new window.naver.maps.LatLng(lat, lng);
+    const initMap = () => {
+      if (!mapRef.current) return;
 
-    const map = new window.naver.maps.Map(mapRef.current, {
-      center: location,
-      zoom: 17,
-      zoomControl: true,
-      zoomControlOptions: {
-        position: window.naver.maps.Position.TOP_RIGHT,
-      },
-    });
-
-    const marker = new window.naver.maps.Marker({
-      position: location,
-      map,
-      title,
-    });
-
-    const infoWindow = new window.naver.maps.InfoWindow({
-      content: `
-        <div style="padding:10px 14px; font-size:14px; line-height:1.5;">
-          <strong>${title}</strong><br/>
-          경기도 성남시 분당구 황새울로351번길 10, 401-B12
-        </div>
-      `,
-    });
-
-    window.naver.maps.Event.addListener(marker, "click", () => {
-      if (infoWindow.getMap()) {
-        infoWindow.close();
-      } else {
-        infoWindow.open(map, marker);
+      if (!window.naver || !window.naver.maps) {
+        retryId = setTimeout(initMap, 200);
+        return;
       }
-    });
+
+      if (initializedRef.current) return;
+      initializedRef.current = true;
+
+      const location = new window.naver.maps.LatLng(lat, lng);
+
+      const map = new window.naver.maps.Map(mapRef.current, {
+        center: location,
+        zoom: 17,
+        zoomControl: true,
+        zoomControlOptions: {
+          position: window.naver.maps.Position.TOP_RIGHT,
+        },
+      });
+
+      const marker = new window.naver.maps.Marker({
+        position: location,
+        map,
+        title,
+      });
+
+      const infoWindow = new window.naver.maps.InfoWindow({
+        content: `
+          <div style="padding:10px 14px; font-size:14px; line-height:1.5;">
+            <strong>${title}</strong><br/>
+            경기도 성남시 분당구 황새울로351번길 10, 401-B12
+          </div>
+        `,
+      });
+
+      window.naver.maps.Event.addListener(marker, "click", () => {
+        if (infoWindow.getMap()) {
+          infoWindow.close();
+        } else {
+          infoWindow.open(map, marker);
+        }
+      });
+    };
+
+    initMap();
+
+    return () => {
+      if (retryId) clearTimeout(retryId);
+    };
   }, [lat, lng, title]);
 
   return <div ref={mapRef} className="h-[260px] w-full sm:h-[320px] lg:h-[400px]" />;
