@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
+const naverMapKey = process.env.NEXT_PUBLIC_NAVER_MAP_CLIENT_ID;
+console.log("NAVER KEY:", JSON.stringify(naverMapKey));
 export const metadata: Metadata = {
   title: "국제자문번역행정사사무소 | 분당 판교 번역·공증·아포스티유·대사관 인증",
   description:
@@ -50,7 +51,8 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Analytics />
 <Script
-  src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ecwob75ngt"
+     src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${naverMapKey}`}
+
   strategy="beforeInteractive"
 />
 
