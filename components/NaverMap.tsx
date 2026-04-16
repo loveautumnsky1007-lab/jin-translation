@@ -86,4 +86,8 @@ const infoWindow = new window.naver.maps.InfoWindow({
     };
   }, [lat, lng, title]);
 
-return <div ref={mapRef} className="h-full w-full" />;}
+return   <div 
+      ref={mapRef} 
+      className="h-full w-full relative overflow-hidden" 
+      style={{ isolation: 'isolate' }} // 다른 요소가 위로 올라오는 걸 방지하는 확실한 방법
+    />;}
