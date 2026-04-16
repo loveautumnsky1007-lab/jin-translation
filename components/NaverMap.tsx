@@ -69,6 +69,7 @@ const infoWindow = new window.naver.maps.InfoWindow({
     </div>
   `,
 });
+infoWindow.open(map, marker);
 
       window.naver.maps.Event.addListener(marker, "click", () => {
         if (infoWindow.getMap()) {
