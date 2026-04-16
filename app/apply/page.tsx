@@ -680,8 +680,10 @@ export default function ApplyPage() {
                   </div>
                 </section>
               </form>
+              
             </div>
           </section>
+          
         </main>
       </div>
     </>

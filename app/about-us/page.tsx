@@ -144,73 +144,73 @@ useEffect(() => {
           </div>
         </section>
 
-        <section id="contact" className="bg-white">
-  <div className="mx-auto max-w-7xl px-6 py-8 lg:px-8">
-    <div className="rounded-[26px] bg-[#3f4b74] px-6 py-8 text-white shadow-lg sm:px-8 lg:px-10 lg:py-10">
-      <div className="max-w-xl">
-        <h2 className="text-xl font-bold sm:text-2xl">
-          빠른 상담 안내
-        </h2>
+       <section id="contact" className="bg-white py-12">
+  <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <div className="relative overflow-hidden rounded-[30px] border border-slate-200 bg-gradient-to-br from-white via-[#f8faff] to-[#eef2ff] shadow-[0_16px_40px_rgba(47,58,99,0.08)]">
+      <div className="h-4 w-full bg-gradient-to-r from-[#3f4b74] via-[#6c7bd9] to-[#9aa8f5]" />
 
-        <p className="mt-2 text-xs sm:text-sm text-slate-200">
-          제출 목적과 문서 종류에 따라 필요한 번역, 확인서 발급, 인증 절차가 달라질 수 있습니다. <br/>
-          견적문의하기 또는 카카오톡으로 문의해주시면 빠르게 안내해드립니다.
-        </p>
+      <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#6c7bd9]/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 left-10 h-56 w-56 rounded-full bg-[#3f4b74]/10 blur-3xl" />
+
+      <div className="relative px-6 py-8 sm:px-8 lg:px-10 lg:py-10">
+        <div className="max-w-2xl">
+          <h2 className="mt-4 text-2xl font-bold tracking-tight text-[#2f3a63] sm:text-3xl">
+            빠른 상담 안내
+          </h2>
+
+          <p className="mt-3 text-sm leading-7 text-slate-600 sm:text-base">
+            제출 목적과 문서 종류에 따라 필요한 번역, 확인서 발급, 인증 절차가 달라질 수 있습니다.
+            <br className="hidden sm:block" />
+            견적문의하기 또는 카카오톡으로 문의해주시면 빠르게 안내해드립니다.
+          </p>
+        </div>
+
+        <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {isMobile ? (
+            <a
+              href="tel:01062619885"
+              className="inline-flex items-center justify-center rounded-full border border-[#d8def4] bg-white px-5 py-3 text-sm font-semibold text-[#3f4b74] shadow-[0_6px_16px_rgba(63,75,116,0.08)] ring-1 ring-white/70 transition duration-200 hover:-translate-y-0.5 hover:bg-[#f8faff] hover:shadow-[0_10px_20px_rgba(63,75,116,0.12)]"
+            >
+              전화 상담 : 010-6261-9885
+            </a>
+          ) : (
+            <div className="inline-flex items-center justify-center rounded-full border border-[#d8def4] bg-white px-5 py-3 text-sm font-semibold text-[#3f4b74] shadow-[0_6px_16px_rgba(63,75,116,0.08)] ring-1 ring-white/70">
+              전화 상담 : 010-6261-9885
+            </div>
+          )}
+
+          <a
+            href="/apply"
+            className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#3f4b74] to-[#5a6bbf] px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(63,75,116,0.22)] ring-1 ring-white/15 transition duration-200 hover:-translate-y-0.5 hover:shadow-[0_14px_28px_rgba(63,75,116,0.28)] active:translate-y-0"
+          >
+            견적 문의하기
+          </a>
+
+          <a
+            href="https://open.kakao.com/me/love_autumnsky"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FEE500] px-5 py-3 text-sm font-semibold text-black shadow-[0_8px_18px_rgba(254,229,0,0.22)] ring-1 ring-black/5 transition duration-200 hover:-translate-y-0.5 hover:brightness-[0.98] hover:shadow-[0_12px_24px_rgba(254,229,0,0.28)]"
+          >
+            <img src="/kakao.png" className="h-4 w-4 object-contain" alt="카카오톡" />
+            카카오톡 상담
+          </a>
+
+          <a
+            href={
+              isMobile
+                ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee"
+                : "https://blog.naver.com/PostList.naver?blogId=skytruthlee"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-[#03C75A] px-5 py-3 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(3,199,90,0.20)] ring-1 ring-white/10 transition duration-200 hover:-translate-y-0.5 hover:brightness-[0.98] hover:shadow-[0_12px_24px_rgba(3,199,90,0.26)]"
+          >
+            <img src="/naver.png" className="h-4 w-4 object-contain" alt="블로그 방문" />
+            블로그 방문
+          </a>
+        </div>
       </div>
-
-     <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
-{isMobile ? (
-  <a
-    href="tel:01062619885"
-    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm"
-  >
-    전화 상담 : 010-6261-9885
-  </a>
-) : (
-  <div className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px-4 py-3 text-sm font-medium text-white shadow-sm">
-    전화 상담 : 010-6261-9885
-  </div>
-)}
-{isMobile ? (
-  <a
-    href="/apply"
-    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px- py-3 text-sm font-medium text-white shadow-sm"
-  >
-    견적 문의하기
-  </a>
-) : (
-   <a
-    href="/apply"
-    className="flex items-center justify-center rounded-xl border border-white/15 bg-[#54618d] px- py-3 text-sm font-medium text-white shadow-sm"
-  >
-    견적 문의하기
-  </a>
-)}
-
-  <a
-    href="https://open.kakao.com/me/love_autumnsky"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center gap-2 rounded-xl bg-[#FEE500] px-4 py-3 text-sm font-semibold text-black shadow-sm transition hover:brightness-95"
-  >
-    <img src="/kakao.png" className="h-4 w-4" alt="카카오톡" />
-    카카오톡 상담
-  </a>
-
-  <a
-    href={
-      isMobile
-        ? "https://m.blog.naver.com/PostList.naver?blogId=skytruthlee"
-        : "https://blog.naver.com/PostList.naver?blogId=skytruthlee"
-    }
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center gap-2 rounded-xl bg-[#03C75A] px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:brightness-95"
-  >
-    <img src="/naver.png" className="h-4 w-4" alt="블로그 방문" />
-    블로그 방문
-  </a>
-</div>
     </div>
   </div>
 </section>
