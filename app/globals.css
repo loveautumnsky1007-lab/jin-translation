@@ -26,12 +26,12 @@ body {
 }
 
 .hero-bg {
-  background-image: url('/hero-bgs.png');
+  background-image: url('/hero-bgs3.png');
 }
 
 @media (min-width: 768px) {
   .hero-bg {
-    background-image: url('/hero-bgs.png');
+    background-image: url('/hero-bgs3.png');
   }
 }
 

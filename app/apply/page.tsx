@@ -496,12 +496,16 @@ export default function ApplyPage() {
                             문서 종류
                           </label>
                           <select
-                            name="document_type"
-                            value={documentType}
-                            onChange={(e) => setDocumentType(e.target.value)}
-                            className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm outline-none transition focus:border-[#3f4b74]"
-                          >
-                            <option disabled>개인 서류</option>
+  name="document_type"
+  value={documentType}
+  onChange={(e) => setDocumentType(e.target.value)}
+  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-2.5 text-sm text-[#3f4b74] outline-none transition focus:border-[#3f4b74]"
+>
+  <option value="" disabled>
+    문서를 선택해주세요
+  </option>
+
+                            <option disabled>──── 개인 서류 ────</option>
                             <option>가족관계증명서</option>
                             <option>기본증명서</option>
                             <option>혼인관계증명서</option>
@@ -511,15 +515,15 @@ export default function ApplyPage() {
                             <option>생활기록부</option>
                             <option>학위증</option>
                             <option>재직증명서</option>
-                            <option disabled>기업 서류</option>
+                            <option disabled>──── 기업 서류 ────</option>
                             <option>사업자등록증</option>
                             <option>법인등기부등본</option>
                             <option>계약서</option>
 
-                            <option disabled>법원 서류</option>
+                            <option disabled>──── 법원 서류 ────</option>
                             <option>판결문</option>
 
-                            <option disabled>기타</option>
+                            <option disabled>──── 기타 서류 ────</option>
                             <option value="direct">직접 입력</option>
                           </select>
 

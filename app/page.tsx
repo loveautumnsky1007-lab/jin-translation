@@ -21,35 +21,29 @@ export default function Home() {
 
       <main>
         <section className="hero-bg relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[420px] sm:min-h-[500px]">
-          <div className="absolute inset-0 bg-white/10" />
-
-          <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
+<div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-white/85 via-white/10 to-transparent" />      
+    <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
             <div className="max-w-9xl">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="text-sm text-[#3f4b74] font-medium tracking-wide">
-                  행정안전부 공인 · 대한외국어번역행정사협회
-                </span>
-              </div>
+            
               <p className="mb-4 inline-block rounded-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9] px-5 py-1.5 text-xs font-medium tracking-wide text-white shadow-md backdrop-blur transition hover:shadow-lg">
-                Professional Translation Service
+                 행정안전부 공인 · 대한외국어번역행정사협회
               </p>
               <h1 className="text-3xl font-semibold leading-[1.3] tracking-tight text-[#2f3a63] sm:text-4xl lg:text-5xl">
                 정확성과 신속성을 갖춘 <br />
                 전문 번역 · 인증 서비스
 
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-[#33415f] font-medium sm:text-xl">
-                개인 문서부터 기업 문서까지, 제출 목적에 맞는 번역과 확인서 발급,
-                아포스티유 및 대사관 인증까지 한 번에 제공합니다.
-              </p>
-              <div className="mt-6 space-y-2 text-base text-[#33415f] leading-7 font-medium">
-                <p>-  외국어(영어) 번역 행정사</p>
-                <p>-  미국공인회계사 (AICPA)</p>
-                <p>-  미국 주립대 석사 (MBA)</p>
-                <p>-  법원 통·번역인</p>
-                <p>-  조선소·제조업·금융기관 근무</p>
-                <p>-  당일번역 · 급행번역 · 익일수령</p>
-              </div>
+              </h1><p className="mt-6 space-y-2 text-base text-[#1f2a44] leading-7 font-semibold">
+  개인 문서부터 기업 문서까지 <br />제출 목적에 맞는 번역과 확인서 발급,  <br />아포스티유 및 대사관 인증을 한 번에 제공합니다.
+</p>
+
+<div className="mt-6 space-y-2 text-base text-[#1f2a44] leading-7 font-semibold"> 
+   <p>- 외국어(영어) 번역 행정사</p>
+  <p>- 미국공인회계사 (AICPA)</p>
+  <p>- 미국 주립대 석사 (MBA)</p>
+  <p>- 법원 통·번역인</p>
+  <p>- 조선소·제조업·금융기관 근무</p>
+  <p>- 당일번역 · 급행번역 · 익일수령</p>
+</div>
               <div className="mt-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
                 <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
 
@@ -201,8 +195,8 @@ export default function Home() {
     <div className="rounded-[28px] border border-slate-200 bg-[#f8faff] p-4 shadow-sm sm:p-6 lg:p-8">
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-8">
         {/* 지도 */}
-<div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm h-[450px]">
-  <NaverMap
+<div className="overflow-hidden rounded-[24px] border border-slate-200 bg-white shadow-sm h-[300px] sm:h-[380px] lg:h-[450px]">
+    <NaverMap
     lat={37.3859}
     lng={127.1233}
     title="국제자문번역행정사사무소"

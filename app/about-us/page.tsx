@@ -56,8 +56,7 @@ useEffect(() => {
 
         <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
-            <div className="rounded-[28px] bg-white p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-[#2f3a63]">
+<div className="rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white to-[#f6f8ff] p-8 shadow-[0_8px_24px_rgba(47,58,99,0.06)]">              <h2 className="text-2xl font-bold text-[#2f3a63]">
                 전문 자격 및 경력
               </h2>
 
@@ -70,8 +69,7 @@ useEffect(() => {
               </div>
             </div>
 
-            <div className="rounded-[28px] bg-white p-8 shadow-sm">
-              <h2 className="text-2xl font-bold text-[#2f3a63]">업무 범위</h2>
+<div className="rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-white to-[#f6f8ff] p-8 shadow-[0_8px_24px_rgba(47,58,99,0.06)]">              <h2 className="text-2xl font-bold text-[#2f3a63]">업무 범위</h2>
 
               <div className="mt-6 space-y-3 leading-7 text-slate-600">
                 <p>· 영문 번역 / 사실확인서 발급</p>
@@ -84,23 +82,38 @@ useEffect(() => {
         </section>
 
         <section className="mx-auto max-w-7xl px-6 pb-12 lg:px-8">
-          <div className="rounded-[28px] bg-white p-8 shadow-sm">
-            <h2 className="text-2xl font-bold text-[#2f3a63]">
-              전문성과 신뢰를 바탕으로
-            </h2>
+  <div className="rounded-[28px] border border-slate-200/80 bg-gradient-to-br from-[#f8faff] to-[#eef2ff] p-8 shadow-[0_10px_30px_rgba(47,58,99,0.08)]">
+<div className="grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      
+  <div className="flex flex-col justify-center">
+    
 
-            <p className="mt-6 leading-7 text-slate-600">
-              국제자문번역행정사사무소는 번역 행정 실무뿐 아니라 회계,
-              경영, 산업 현장 경험을 바탕으로 다양한 문서의 성격과 제출 목적을
-              정확하게 이해하고 안내합니다.
-              <br />
-              <br />
-              개인 서류부터 기업 문서, 법원 관련 문서까지 폭넓게 대응하며,
-              단순 번역을 넘어 실제 제출과 활용까지 고려한 실무형 서비스를
-              제공하는 것을 원칙으로 합니다.
-            </p>
-          </div>
-        </section>
+    <h2 className="mt-4 text-2xl font-bold text-[#2f3a63]">
+      전문성과 신뢰를 바탕으로
+    </h2>
+
+    <p className="mt-6 text-base leading-8 text-slate-600 sm:text-lg">
+      국제자문번역행정사사무소는 <br />번역 행정 실무뿐 아니라 <br />회계, 경영, 산업 현장 경험을 바탕으로 <br />다양한 문서의 성격과 제출 목적을 <br />정확하게 이해하고 안내합니다.
+      <br /><br />
+      개인 서류부터 기업 문서, <br />법원 관련 문서까지 폭넓게 대응하며 <br />단순 번역을 넘어 실제 제출과 활용까지 고려한<br /> 실무형 서비스를 제공합니다.<br /><br />
+      각 기관 및 제출처의 요구사항과 절차를 충분히 고려하여 <br /> 
+불필요한 수정이나 지연 없이 원활하게 진행될 수 있도록 안내드립니다.  
+    </p>
+  </div>
+
+      <div className="flex justify-center lg:justify-end">
+        <div className="rounded-[24px] border border-slate-200 bg-white/80 p-4 shadow-[0_12px_28px_rgba(15,23,42,0.08)] backdrop-blur-sm">
+          <img
+            src="/certificate.png"
+            alt="행정사 자격증"
+            className="w-full max-w-[360px] rounded-xl object-contain"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
         <section className="mx-auto max-w-7xl px-6 pb-12 lg:px-8">
           <div className="rounded-[28px] bg-white p-8 shadow-sm">
