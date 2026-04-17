@@ -24,6 +24,7 @@ export default function Home() {
   <Image
     src="/bundang-translate-office.png"
     alt="분당 판교 번역 공증 아포스티유 국제자문번역행정사사무소"
+    fill
     className="absolute inset-0 h-full w-full object-cover"
       loading="eager"
   />
