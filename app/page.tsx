@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import NaverMap from "../components/NaverMap";
-
+import Image from "next/image";
 export default function Home() {
   const [openModal, setOpenModal] = useState<"terms" | "privacy" | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -20,7 +20,13 @@ export default function Home() {
       <Header />
 
       <main>
-        <section className="hero-bg relative overflow-hidden bg-cover bg-center bg-no-repeat min-h-[420px] sm:min-h-[500px]">
+       <section className="relative overflow-hidden min-h-[420px] sm:min-h-[500px]">
+  <Image
+    src="/bundang-translate-office.png"
+    alt="분당 판교 번역 공증 아포스티유 국제자문번역행정사사무소"
+    className="absolute inset-0 h-full w-full object-cover"
+      loading="eager"
+  />
 <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-white/85 via-white/10 to-transparent" />      
     <div className="relative mx-auto max-w-7xl px-6 py-10 lg:px-8">
             <div className="max-w-9xl">
