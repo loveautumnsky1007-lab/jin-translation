@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import NaverMap from "../components/NaverMap";
 import Image from "next/image";
+import { FileText, Globe, Building2, Scale } from "lucide-react";
+
 export default function Home() {
   const [openModal, setOpenModal] = useState<"terms" | "privacy" | null>(null);
   const [isMobile, setIsMobile] = useState(false);
@@ -110,7 +112,7 @@ export default function Home() {
             <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
               {[
                 {
-                  no: "01",
+    icon: FileText,
                   title: "공문서 번역 및 확인서 발급",
                   desc: {
                     mobile: "가족관계증명서, 혼인증명서, 생활기록부 등\n개인 제출용 각종 증명서 번역 및 확인서 발급 서비스를 제공합니다.",
@@ -121,7 +123,7 @@ export default function Home() {
                     : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
                 },
                 {
-                  no: "02",
+    icon: Globe,
                   title: "국문 번역확인 증명서",
                   desc: {
                     mobile: "해외 아포스티유, 해외 세무자료, 해외 학위증명서 등\n해외 서류의 국내 제출을 위한 번역확인 증명서를 발급합니다.",
@@ -132,7 +134,7 @@ export default function Home() {
                     : "https://blog.naver.com/PostList.nhn?blogId=skytruthlee&from=postList&categoryNo=22",
                 },
                 {
-                  no: "03",
+    icon: Building2,
                   title: "기업 문서 번역",
                   desc: {
                     mobile: "재무제표, 감사보고서, 법률계약서, 법인 서류, 계약서 등\n기업 및 법인 문서 번역을 전문적으로 수행합니다.",
@@ -143,7 +145,7 @@ export default function Home() {
                     : "https://blog.naver.com/PostList.naver?blogId=skytruthlee&from=postList&categoryNo=10",
                 },
                 {
-                  no: "04",
+    icon: Scale,
                   title: "법원통번역 / 대사관인증",
                   desc: {
                     mobile: "아포스티유, 판결문, 소장, 인증 대행,\n번역공증 대행 및 비즈니스 통역을 지원합니다.",
@@ -155,7 +157,7 @@ export default function Home() {
                 },
               ].map((item) => (
                 <a
-                  key={item.no}
+                  key={item.title}
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -164,11 +166,11 @@ export default function Home() {
                   <div className="h-8.5 w-full bg-gradient-to-r from-[#3f4b74] to-[#6c7bd9]" />
 
                   <div className="px-3 py-2 sm:px-6 sm:py-8 lg:py-10">
-                    <div className="mb-3 flex justify-center">
-                      <div className="flex h-8 w-8 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#3f4b74] text-sm sm:text-base font-bold text-white shadow-sm">
-                        {item.no}
-                      </div>
-                    </div>
+                    <div className="mb-4 flex justify-center">
+  <div className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl bg-[#eef2ff] text-[#3f4b74] shadow-sm">
+    <item.icon className="h-5 w-5 sm:h-6 sm:w-6" />
+  </div>
+</div>
 
 <h3 className="text-center text-base sm:text-xl font-bold leading-snug text-[#2f3a63] lg:mb-4">                      {item.title}
                     </h3>
